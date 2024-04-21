@@ -169,4 +169,3 @@ __pycache__
 compile_commands.json
 
 .idea/**/*
-**/node_modules/**
