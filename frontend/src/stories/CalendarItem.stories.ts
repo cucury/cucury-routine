@@ -17,7 +17,13 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const 기본_오늘: Story = {
+export const Basic: Story = {
+  name: '기본',
+  args: {
+    day: "23",
+    mode: "",
+    isToday: true
+  },
   render() {
     const mode = DiaryMode.Good
     return {
@@ -27,12 +33,18 @@ export const 기본_오늘: Story = {
       },
       components: { CalendarItem },
       template: `
-    <CalendarItem date="23" mode="" :is-today="true"  />
+    <CalendarItem day="23" mode="" :is-today="true"  />
   `,
     }
   }
 }
-export const 좋음: Story = {
+export const Good: Story = {
+  name: '좋음',
+  args: {
+    day: "1",
+    mode: DiaryMode.Good,
+    isToday: false
+  },
   render() {
     const mode = DiaryMode.Good
     return {
@@ -42,7 +54,7 @@ export const 좋음: Story = {
       },
       components: { CalendarItem },
       template: `
-        <CalendarItem date="1" :mode="mode" :is-today="false"  />
+        <CalendarItem day="1" :mode="mode" :is-today="false"  />
       `,
     }
   }
