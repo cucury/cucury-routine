@@ -1,12 +1,13 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, type PropType } from 'vue'
 import CalendarItem from '@/components/diary/calendar/CalendarItem.vue'
+import type { DiaryProps } from '@/props'
 
 export default defineComponent({
   name: 'CalendarRow',
   props: {
     dates: {
-      type: Array<String | number>,
+      type: Array<DiaryProps>,
       required: true
     },
     currentDate: {
@@ -19,11 +20,10 @@ export default defineComponent({
       mode: '평범'
     }
   },
-  methods : {
+  methods: {
     isToday(day: number) {
       const current = this.getDate(day).setHours(0, 0, 0, 0)
       const today = new Date().setHours(0, 0, 0, 0)
-      console.log(day, this.getDate(day), new Date(), current === today)
       return current === today
     },
     getDate(day: number) {
@@ -42,12 +42,14 @@ export default defineComponent({
   <div>
     <div class="flex justify-between">
       <div class="flex gap-2">
-        <CalendarItem :key="Number(day)" v-for="day in dates" :day="day.toString()" :isToday="isToday(Number(day))" :mode="mode" />
+        <CalendarItem
+          :key="i"
+          v-for="(diary, i) in dates"
+          :day="new Date(diary.time).getDate().toString()"
+          :isToday="isToday(Number(new Date(diary.time).getDate()))"
+          :mode="diary.mode"
+        />
       </div>
     </div>
   </div>
 </template>
-
-<style scoped>
-
-</style>
