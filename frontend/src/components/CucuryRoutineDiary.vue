@@ -1,15 +1,28 @@
 <script lang="ts">
-import {defineComponent} from "vue"
+import { defineComponent } from 'vue'
+import DiaryHeader from '@/components/diary/DiaryHeader.vue'
+import DiaryCalendar from '@/components/diary/DiaryCalendar.vue'
+import DiaryTimeline from '@/components/diary/DiaryTimeline.vue'
+import useDiaryHeaderToggleStore from '@/stores/diaryHeaderToggle'
+import { dummyWeeks } from '@/consts'
 
 export default defineComponent({
-  name: "CucuryRoutineDiary"
+  name: 'CucuryRoutineDiary',
+  components: { DiaryHeader, DiaryCalendar, DiaryTimeline },
+  setup() {
+    const diaryHeaderToggle = useDiaryHeaderToggleStore()
+    return {
+      diaryHeaderToggle,
+      dummyWeeks
+    }
+  }
 })
 </script>
 
 <template>
-  <div class="h-screen bg-pink-300">Diary</div>
+  <div class="flex flex-col items-center gap-4">
+    <DiaryHeader />
+    <DiaryCalendar v-if="diaryHeaderToggle.isCalendar()" />
+    <DiaryTimeline v-if="diaryHeaderToggle.isTimeline()" :diaries="dummyWeeks[3]" />
+  </div>
 </template>
-
-<style scoped>
-
-</style>
