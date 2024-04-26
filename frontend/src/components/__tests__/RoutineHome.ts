@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 
 import { mount } from '@vue/test-utils'
-import RoutineHome from '../CucuryRoutineHome.vue'
+import RoutineHome from '../../views/CucuryRoutineHome.vue'
 
 describe('Home', () => {
   it('renders properly', () => {
