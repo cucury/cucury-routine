@@ -3,10 +3,12 @@ import { defineComponent } from 'vue'
 import useCalendarStore from '@/stores/calendar'
 import CalendarRow from '@/components/diary/calendar/CalendarRow.vue'
 import type { DiaryProps } from '@/props'
+import SlidingModal from '@/components/modal/SlidingModal.vue'
+import DiaryDetail from '@/components/diary/DiaryDetail.vue'
 
 export default defineComponent({
   name: 'DiaryCalender',
-  components: { CalendarRow },
+  components: { DiaryDetail, SlidingModal, CalendarRow },
   setup() {
     const calendar = useCalendarStore()
     return {
@@ -61,7 +63,6 @@ export default defineComponent({
           }
         })
       })
-      console.log(weeks)
       return weeks
     }
   }
@@ -69,15 +70,26 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>
+  <div class="contents">
     <div class="flex justify-between">
       <div class="flex flex-col">
         <div v-for="(week, i) in weeks" :key="i">
           <div class="flex">
-            <CalendarRow :dates="week" :current-date="calendar.currentDate" />
+            <CalendarRow
+              :dates="week"
+              :current-date="calendar.currentDate"
+              @click="
+                () => {
+                  $refs.detailModal.isShow = true
+                }
+              "
+            />
           </div>
         </div>
       </div>
     </div>
+    <SlidingModal ref="detailModal" :label="calendar.currentDate.toLocaleDateString()">
+      <DiaryDetail />
+    </SlidingModal>
   </div>
 </template>

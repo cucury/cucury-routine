@@ -4,6 +4,6 @@ import { RouterView } from 'vue-router'
 
 <template>
   <div class="flex justify-center w-full">
-    <RouterView class="w-[375px]" />
+    <RouterView class="w-[375px] overflow-hidden" />
   </div>
 </template>

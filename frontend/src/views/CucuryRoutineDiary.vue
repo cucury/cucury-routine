@@ -5,6 +5,7 @@ import DiaryCalendar from '@/components/diary/DiaryCalendar.vue'
 import DiaryTimeline from '@/components/diary/DiaryTimeline.vue'
 import useDiaryHeaderToggleStore from '@/stores/diaryHeaderToggle'
 import { dummyWeeks } from '@/consts'
+import SlidingModal from '@/components/modal/SlidingModal.vue'
 
 export default defineComponent({
   name: 'CucuryRoutineDiary',

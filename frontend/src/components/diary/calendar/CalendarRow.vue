@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, type PropType } from 'vue'
-import CalendarItem from '@/components/diary/calendar/CalendarItem.vue'
+import CalendarItem from '@/components/diary/DiaryItem.vue'
 import type { DiaryProps } from '@/props'
 
 export default defineComponent({
