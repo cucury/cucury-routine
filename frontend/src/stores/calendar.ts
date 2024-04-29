@@ -3,9 +3,9 @@ import { getCalendarMonth } from 'mnth'
 import type { DiaryProps } from '@/props'
 
 export const useCalendarStore = defineStore('calendar', {
-  state: (): { currentMonth: Date; currentDate: Date } => ({
+  state: (): { currentMonth: Date; selectedDate: Date } => ({
     currentMonth: new Date(),
-    currentDate: new Date()
+    selectedDate: new Date()
   }),
   actions: {
     movePrev() {
@@ -24,11 +24,11 @@ export const useCalendarStore = defineStore('calendar', {
     setMonth(month: Date) {
       this.currentMonth = new Date(month.getFullYear(), month.getMonth(), 1)
     },
-    getDate() {
-      return this.currentDate
+    getSelectedDate() {
+      return this.selectedDate
     },
-    setDate(date: Date) {
-      this.currentDate = new Date(date.getFullYear(), date.getMonth(), 1)
+    setSelectedDate(date: Date) {
+      this.selectedDate = date
     },
     getWeeks() {
       const date = this.getMonth()

@@ -22,7 +22,7 @@ export const Basic: Story = {
   name: '기본',
   args: {
     dates: dummyWeeks[3],
-    currentDate: new Date()
+    currentMonth: new Date()
   },
   render() {
     const calendar = useCalendarStore()
@@ -32,7 +32,9 @@ export const Basic: Story = {
       },
       components: { CalendarRow },
       template: `
-    <CalendarRow :dates="dummyWeeks[3]" :current-date="calendar.getDate()" />
+    <CalendarRow 
+      :dates="dummyWeeks[3]" 
+      :current-month="calendar.getMonth()" />
   `
     }
   }
