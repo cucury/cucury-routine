@@ -2,6 +2,7 @@
 import { defineComponent, type PropType } from 'vue'
 import CalendarItem from '@/components/diary/DiaryItem.vue'
 import type { DiaryProps } from '@/props'
+import calendar from '@/stores/calendar'
 
 export default defineComponent({
   name: 'CalendarRow',
@@ -21,6 +22,7 @@ export default defineComponent({
     }
   },
   methods: {
+    calendar,
     isToday(day: number) {
       const current = this.getDate(day).setHours(0, 0, 0, 0)
       const today = new Date().setHours(0, 0, 0, 0)
@@ -43,6 +45,11 @@ export default defineComponent({
     <div class="flex justify-between">
       <div class="flex gap-2">
         <CalendarItem
+          @click="
+            () => {
+              calendar
+            }
+          "
           :key="i"
           v-for="(diary, i) in dates"
           :day="new Date(diary.time).getDate().toString()"

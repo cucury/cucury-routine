@@ -16,7 +16,7 @@ export default defineComponent({
         <div>기분</div>
       </div>
       <div>
-        <div>
+        <div class="px-4">
           <DiaryDetailMood />
         </div>
       </div>
@@ -26,7 +26,7 @@ export default defineComponent({
         <div>기록</div>
       </div>
       <div>
-        <div class="flex justify-center">
+        <div class="flex justify-center px-4">
           <textarea
             class="border border-gray-200 rounded-xl w-[90vw] p-3 focus:border-transparent focus:ring-1 focus:outline-0"
             placeholder="일기를 작성해보세요"

@@ -5,6 +5,7 @@ import CalendarRow from '@/components/diary/calendar/CalendarRow.vue'
 import type { DiaryProps } from '@/props'
 import SlidingModal from '@/components/modal/SlidingModal.vue'
 import DiaryDetail from '@/components/diary/DiaryDetail.vue'
+import type { SubscriptionCallbackMutation } from 'pinia'
 
 export default defineComponent({
   name: 'DiaryCalender',
@@ -15,7 +16,7 @@ export default defineComponent({
       calendar
     }
   },
-  data(): { diaries: Array<DiaryProps> } {
+  data(): { diaries: Array<DiaryProps>; weeks: Array } {
     return {
       diaries: [
         {
@@ -39,13 +40,24 @@ export default defineComponent({
           content: '',
           createdAt: 0
         }
-      ]
+      ],
+      weeks: []
     }
   },
-  computed: {
-    weeks(): Array<Array<DiaryProps>> {
+  mounted() {
+    this.weeks = this.getWeeks()
+    this.calendar.$subscribe((mutation) => {
+      if (mutation.events.key === 'currentMonth') {
+        this.weeks = this.getWeeks()
+      }
+    })
+  },
+  methods: {
+    getWeeks(): Array<Array<DiaryProps>> {
       let weeks: Array<Array<DiaryProps>> = []
       weeks = [...this.calendar.getWeeks()]
+      if (weeks == this.calendar.getWeeks()) {
+      }
       weeks = weeks.map((diaries) => {
         return diaries.map((diary) => {
           const diaryByStorage: DiaryProps | undefined = this.diaries.find((diaryByStorage) => {

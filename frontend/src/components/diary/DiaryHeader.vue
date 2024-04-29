@@ -12,6 +12,11 @@ export default defineComponent({
       calendar,
       diaryHeaderToggle
     }
+  },
+  computed: {
+    currentDate() {
+      return `${this.calendar.getMonth().getFullYear()}.${this.calendar.getMonth().getMonth() + 1}`
+    }
   }
 })
 </script>
@@ -23,22 +28,20 @@ export default defineComponent({
         type="button"
         @click="
           () => {
-            const month: number = calendar.getDate().getMonth() - 1
-            calendar.setDate(new Date(calendar.getDate().getFullYear(), month))
+            calendar.movePrev()
           }
         "
       >
         👈
       </button>
       <div>
-        {{ `${calendar.getDate().getFullYear()}.${calendar.getDate().getMonth() + 1}` }}
+        {{ currentDate }}
       </div>
       <button
         type="button"
         @click="
           () => {
-            const month: number = calendar.getDate().getMonth() + 1
-            calendar.setDate(new Date(calendar.getDate().getFullYear(), month))
+            calendar.moveNext()
           }
         "
       >
