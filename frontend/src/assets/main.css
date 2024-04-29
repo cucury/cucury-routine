@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@layer base {
+    html {
+        font-family: 'GangwonEdu_OTFBoldA';
+    }
+}
+@layer utilities {
+    .hidden-scrollbar {
+        -ms-overflow-style: none; /* IE, Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    .hidden-scrollbar::-webkit-scrollbar {
+        /* Chrome, Safari */
+        display: none;
+    }
+}

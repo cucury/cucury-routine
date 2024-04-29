@@ -8,6 +8,19 @@ export enum DayType {
   '일'
 }
 
+export const DiaryMode = {
+  Ordinary: '평범',
+  Happiness: '행복',
+  Tranquility: '평온',
+  Depressed: '우울',
+  Tired: '피곤',
+  Aggro: '화남',
+  Good: '좋음',
+  Sadness: '슬픔',
+  Busyness: '바쁨',
+  Pain: '아픔'
+}
+
 export const dummyWeeks = [
   [
     { id: -1, mode: '', content: '', time: new Date('2024. 4. 1.').getTime(), createdAt: 0 },

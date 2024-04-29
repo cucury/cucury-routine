@@ -1,25 +1,12 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-export const DiaryMode = {
-  Ordinary: '평범',
-  Happiness: '행복',
-  Tranquility: '평온',
-  Depressed: '우울',
-  Tired: '피곤',
-  Aggro: '화남',
-  Good: '좋음',
-  Sadness: '슬픔',
-  Busyness: '바쁨',
-  Pain: '아픔'
-}
-
 export default defineComponent({
-  name: 'CalendarItem',
+  name: 'DiaryItem',
   props: {
     day: {
       type: String,
-      required: true
+      required: false
     },
     isToday: {
       type: Boolean,
@@ -42,7 +29,7 @@ export default defineComponent({
       >
         <div v-if="isToday">
           <svg
-            class="w-6 h-6 text-gray-800 text-green-500"
+            class="w-6 h-6 text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"

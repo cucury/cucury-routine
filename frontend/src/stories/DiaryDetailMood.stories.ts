@@ -1,30 +1,27 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import CalendarItem, { DiaryMode } from '@/components/diary/calendar/CalendarItem.vue'
+import DiaryDetailMood from '@/components/diary/detail/DiaryDetailMood.vue'
+import { DiaryMode } from '@/consts'
 import useNavigation, { Navigations } from '@/stores/navi'
 import { dummyWeeks } from '@/consts'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
-  title: 'Components/diary/calendar/CalendarItem',
-  component: CalendarItem,
+  title: 'Components/diary/detail/DiaryDetailMood',
+  component: DiaryDetailMood,
   // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/writing-docs/autodocs
   // tags: ['autodocs'],
   args: {
     // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
     // onClick: fn(),
   }
-} satisfies Meta<typeof CalendarItem>
+} satisfies Meta<typeof DiaryDetailMood>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
   name: '기본',
-  args: {
-    day: new Date(dummyWeeks[3][0].time).getDate().toString(),
-    mode: '',
-    isToday: true
-  },
+  args: {},
   render() {
     const mode = DiaryMode.Good
     return {
@@ -32,31 +29,10 @@ export const Basic: Story = {
         const navi = useNavigation()
         return { navi, Navigations, mode, dummyWeeks }
       },
-      components: { CalendarItem },
+      components: { DiaryDetailMood },
       template: `
-    <CalendarItem :day="new Date(dummyWeeks[3][0].time).getDate().toString()" mode="" :is-today="true"  />
+    <DiaryDetailMood />
   `
-    }
-  }
-}
-export const Good: Story = {
-  name: '좋음',
-  args: {
-    day: '1',
-    mode: DiaryMode.Good,
-    isToday: false
-  },
-  render() {
-    const mode = DiaryMode.Good
-    return {
-      setup() {
-        const navi = useNavigation()
-        return { navi, Navigations, mode }
-      },
-      components: { CalendarItem },
-      template: `
-        <CalendarItem day="1" :mode="mode" :is-today="false"  />
-      `
     }
   }
 }
