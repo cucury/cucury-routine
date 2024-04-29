@@ -1,17 +1,24 @@
 <script lang="ts">
-import { defineComponent, type PropType } from 'vue'
+import { defineComponent, type PropType, type Ref, type UnwrapRef } from 'vue'
 import CalendarItem from '@/components/diary/DiaryItem.vue'
 import type { DiaryProps } from '@/props'
-import calendar from '@/stores/calendar'
+import useCalendarStore from '@/stores/calendar'
+import type SlidingModal from '@/components/modal/SlidingModal.vue'
 
 export default defineComponent({
   name: 'CalendarRow',
+  setup() {
+    const calendar = useCalendarStore()
+    return {
+      calendar
+    }
+  },
   props: {
     dates: {
       type: Array<DiaryProps>,
       required: true
     },
-    currentDate: {
+    currentMonth: {
       type: Date,
       required: true
     }
@@ -22,16 +29,10 @@ export default defineComponent({
     }
   },
   methods: {
-    calendar,
-    isToday(day: number) {
-      const current = this.getDate(day).setHours(0, 0, 0, 0)
+    isToday(date: Date) {
+      const current = date.setHours(0, 0, 0, 0)
       const today = new Date().setHours(0, 0, 0, 0)
       return current === today
-    },
-    getDate(day: number) {
-      const date = new Date()
-      date.setDate(day)
-      return date
     }
   },
   components: {
@@ -45,15 +46,17 @@ export default defineComponent({
     <div class="flex justify-between">
       <div class="flex gap-2">
         <CalendarItem
+          :class="{ 'opacity-50': currentMonth.getMonth() !== new Date(diary.time).getMonth() }"
           @click="
             () => {
-              calendar
+              calendar.setSelectedDate(new Date(diary.time))
+              $emit('show-modal')
             }
           "
           :key="i"
           v-for="(diary, i) in dates"
           :day="new Date(diary.time).getDate().toString()"
-          :isToday="isToday(Number(new Date(diary.time).getDate()))"
+          :isToday="isToday(new Date(diary.time))"
           :mode="diary.mode"
         />
       </div>

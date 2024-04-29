@@ -1,22 +1,23 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref, type Ref, type UnwrapRef } from 'vue'
 import useCalendarStore from '@/stores/calendar'
 import CalendarRow from '@/components/diary/calendar/CalendarRow.vue'
 import type { DiaryProps } from '@/props'
 import SlidingModal from '@/components/modal/SlidingModal.vue'
 import DiaryDetail from '@/components/diary/DiaryDetail.vue'
-import type { SubscriptionCallbackMutation } from 'pinia'
 
 export default defineComponent({
   name: 'DiaryCalender',
   components: { DiaryDetail, SlidingModal, CalendarRow },
   setup() {
     const calendar = useCalendarStore()
+    const detailModalRef: Ref<UnwrapRef<typeof SlidingModal | null>> = ref(null)
     return {
-      calendar
+      calendar,
+      detailModalRef
     }
   },
-  data(): { diaries: Array<DiaryProps>; weeks: Array } {
+  data(): { diaries: Array<DiaryProps>; weeks: Array<Array<DiaryProps>> } {
     return {
       diaries: [
         {
@@ -47,17 +48,24 @@ export default defineComponent({
   mounted() {
     this.weeks = this.getWeeks()
     this.calendar.$subscribe((mutation) => {
-      if (mutation.events.key === 'currentMonth') {
-        this.weeks = this.getWeeks()
+      if (Array.isArray(mutation.events)) {
+        // do nothing
+      } else {
+        if (mutation.events.key === 'currentMonth') {
+          this.weeks = this.getWeeks()
+        }
       }
     })
+  },
+  computed: {
+    selectedDate() {
+      return this.calendar.getSelectedDate()
+    }
   },
   methods: {
     getWeeks(): Array<Array<DiaryProps>> {
       let weeks: Array<Array<DiaryProps>> = []
       weeks = [...this.calendar.getWeeks()]
-      if (weeks == this.calendar.getWeeks()) {
-      }
       weeks = weeks.map((diaries) => {
         return diaries.map((diary) => {
           const diaryByStorage: DiaryProps | undefined = this.diaries.find((diaryByStorage) => {
@@ -89,10 +97,12 @@ export default defineComponent({
           <div class="flex">
             <CalendarRow
               :dates="week"
-              :current-date="calendar.currentDate"
-              @click="
+              :current-month="calendar.currentMonth"
+              @show-modal="
                 () => {
-                  $refs.detailModal.isShow = true
+                  if (detailModalRef) {
+                    detailModalRef.isShow = true
+                  }
                 }
               "
             />
@@ -100,7 +110,7 @@ export default defineComponent({
         </div>
       </div>
     </div>
-    <SlidingModal ref="detailModal" :label="calendar.currentDate.toLocaleDateString()">
+    <SlidingModal ref="detailModalRef" :label="selectedDate.toLocaleDateString()">
       <DiaryDetail />
     </SlidingModal>
   </div>
