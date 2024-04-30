@@ -4,7 +4,7 @@ import useNavigation, { Navigations } from '@/stores/navi'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
-  title: 'View/HomeView',
+  title: 'Views/HomeView',
   component: HomeView,
   // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/writing-docs/autodocs
   // tags: ['autodocs'],
