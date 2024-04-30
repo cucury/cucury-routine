@@ -8,7 +8,8 @@ datasource db {
 }
 
 model diary {
-  id      Int     @id(map: "diary_pk") @default(autoincrement())
-  title   String
-  content String?
+  id        Int     @id(map: "diary_pk") @default(autoincrement())
+  title     String
+  content   String?
+  user_hash String
 }

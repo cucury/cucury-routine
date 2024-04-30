@@ -1,15 +1,17 @@
 ###
 POST http://localhost:9000/api/v1/diary HTTP/1.1
 content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTQ0NTIxODQsImV4cCI6MTcxNDQ1Mjc4NH0.EpE9GpPlxIndOt_1bKAFwIMFcVOUKASMzZ9VyeskqUQ
 
 {
   "title": "My first diary",
-  "content": "This is my first diary. I'm so excited!"
+  "content": "This is my first diary. I'm so, excited!"
 }
 
 ###
 GET http://localhost:9000/api/v1/diary HTTP/1.1
 content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTQ0NTIxODQsImV4cCI6MTcxNDQ1Mjc4NH0.EpE9GpPlxIndOt_1bKAFwIMFcVOUKASMzZ9VyeskqUQ
 
 ###
 PUT http://localhost:9000/api/v1/diary HTTP/1.1
