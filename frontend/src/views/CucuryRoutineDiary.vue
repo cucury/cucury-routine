@@ -9,13 +9,20 @@ import SlidingModal from '@/components/modal/SlidingModal.vue'
 
 export default defineComponent({
   name: 'CucuryRoutineDiary',
+  methods: {
+    dummyWeeks() {
+      return dummyWeeks
+    }
+  },
   components: { DiaryHeader, DiaryCalendar, DiaryTimeline },
   setup() {
     const diaryHeaderToggle = useDiaryHeaderToggleStore()
     return {
       diaryHeaderToggle,
-      dummyWeeks
     }
+  },
+  async mounted() {
+
   }
 })
 </script>
@@ -24,6 +31,6 @@ export default defineComponent({
   <div class="flex flex-col items-center gap-4">
     <DiaryHeader />
     <DiaryCalendar v-if="diaryHeaderToggle.isCalendar()" />
-    <DiaryTimeline v-if="diaryHeaderToggle.isTimeline()" :diaries="dummyWeeks[3]" />
+    <DiaryTimeline v-if="diaryHeaderToggle.isTimeline()" />
   </div>
 </template>

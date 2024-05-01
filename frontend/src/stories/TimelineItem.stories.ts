@@ -21,10 +21,9 @@ export const Basic: Story = {
   args: {
     diary: {
       id: 1,
-      mode: '행복',
+      mood: '행복',
       content: 'content',
       time: 1713879732902,
-      createdAt: 1713879732902,
     }
   },
   render() {
@@ -33,7 +32,7 @@ export const Basic: Story = {
       template: `
     <TimelineItem :diary="{
       id: 1,
-      mode: '행복',
+      mood: '행복',
       content: 'content',
       time: 1713879732902,
       createdAt: 1713879732902,

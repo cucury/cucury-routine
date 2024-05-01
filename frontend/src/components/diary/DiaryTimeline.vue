@@ -1,16 +1,31 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { type DiaryProps } from '@/props'
 import TimelineItem from '@/components/diary/timeline/TimelineItem.vue'
+import { routineServerInstance } from '@/service'
 
 export default defineComponent({
   name: 'DiaryTimeline',
   components: { TimelineItem },
-  props: {
-    diaries: {
-      type: Array as () => Array<DiaryProps>,
-      required: true
+  setup() {
+    const routineServer = routineServerInstance()
+    return {
+      routineServer
     }
+  },
+  data() {
+    return {
+      diaries: []
+    }
+  },
+  async mounted() {
+    // fetch data from server
+    const { data } = await this.routineServer.get('/diary')
+    this.diaries = data.map((el: any) => {
+      return {
+        ...el,
+        time: Number(el.time)
+      }
+    })
   }
 })
 </script>
@@ -25,7 +40,7 @@ export default defineComponent({
     </div>
     <div v-if="diaries?.length > 0" class="flex flex-col items-center gap-4">
       <div>
-        <div :key="i" v-for="(diary, i) in diaries.filter((el) => el.mode)">
+        <div :key="i" v-for="(diary, i) in diaries.filter((el) => el.mood)">
           <TimelineItem :diary="diary" />
         </div>
       </div>

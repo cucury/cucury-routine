@@ -12,7 +12,7 @@ export default defineComponent({
       type: Boolean,
       required: true
     },
-    mode: {
+    mood: {
       type: String,
       required: false
     }
@@ -27,7 +27,10 @@ export default defineComponent({
         type="button"
         class="relative flex w-8 h-8 bg-green-200 rounded-full text-[0.8rem] font-bold justify-center items-center"
       >
-        <div v-if="isToday">
+        <div v-if="mood">
+          {{ mood }}
+        </div>
+        <div v-else-if="isToday && !mood">
           <svg
             class="w-6 h-6 text-gray-800"
             aria-hidden="true"
@@ -48,9 +51,6 @@ export default defineComponent({
           <div
             class="absolute top-0 left-0 w-8 h-8 border border-green-500 rounded-full border-dashed"
           ></div>
-        </div>
-        <div v-if="!isToday">
-          {{ mode ?? '' }}
         </div>
       </button>
     </div>

@@ -4,7 +4,7 @@ content-type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTQ0NTIxODQsImV4cCI6MTcxNDQ1Mjc4NH0.EpE9GpPlxIndOt_1bKAFwIMFcVOUKASMzZ9VyeskqUQ
 
 {
-  "title": "My first diary",
+  "mood": "My first diary",
   "content": "This is my first diary. I'm so, excited!"
 }
 
@@ -14,11 +14,16 @@ content-type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTQ0NTIxODQsImV4cCI6MTcxNDQ1Mjc4NH0.EpE9GpPlxIndOt_1bKAFwIMFcVOUKASMzZ9VyeskqUQ
 
 ###
+GET http://localhost:9000/api/v1/diary/1 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFAYi5jIiwiaWF0IjoxNzE0NTQ3MDQ3LCJleHAiOjE3MTQ1NDc2NDd9.vCoKLF23raJp2CD2U4eBSjMG04uZuveZwzUORB9V-tQ
+
+###
 PUT http://localhost:9000/api/v1/diary HTTP/1.1
 content-type: application/json
 
 {
   "id": 1,
-  "title": "My first diary",
+  "mood": "My first diary",
   "content": "This is my first diary. I'm so excited! I'm going to write a diary every day."
 }

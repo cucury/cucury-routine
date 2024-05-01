@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import DiaryDetail from '@/components/diary/DiaryDetail.vue'
-import { DiaryMode } from '@/consts'
+import { DiaryMood } from '@/consts'
 import useNavigation, { Navigations } from '@/stores/navi'
 import { dummyWeeks } from '@/consts'
 
@@ -23,11 +23,11 @@ export const Basic: Story = {
   name: '기본',
   args: {},
   render() {
-    const mode = DiaryMode.Good
+    const mood = DiaryMood.Good
     return {
       setup() {
         const navi = useNavigation()
-        return { navi, Navigations, mode, dummyWeeks }
+        return { navi, Navigations, mood, dummyWeeks }
       },
       components: { DiaryDetail },
       template: `

@@ -39,10 +39,9 @@ export const useCalendarStore = defineStore('calendar', {
         return times.map((time) => {
           const result: DiaryProps = {
             id: -1,
-            mode: '',
+            mood: '',
             content: '',
             time: time,
-            createdAt: 0
           }
           return result
         })

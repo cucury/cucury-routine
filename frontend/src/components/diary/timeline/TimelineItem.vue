@@ -48,7 +48,7 @@ export default defineComponent({
       <div class="flex flex-col gap-2">
         <div class="w-8 h-8 rounded-full bg-indigo-500" />
         <div class="text-sm">
-          {{ diary.mode }}
+          {{ diary.mood }}
         </div>
       </div>
       <div class="text-lg">

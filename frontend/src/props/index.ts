@@ -1,7 +1,6 @@
 export interface DiaryProps {
-  id: number
+  id: number | null
   content: string
-  mode: string
+  mood: string
   time: number
-  createdAt: number
 }
