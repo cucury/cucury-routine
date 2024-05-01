@@ -20,13 +20,6 @@ type Story = StoryObj<typeof meta>
 export const Basic: Story = {
   name: '기본',
   args: {
-    diaries: [{
-      id: 1,
-      time: 1711942194833,
-      mode: '행복',
-      content: '오늘은 새로운 친구를 만났다.',
-      createdAt: 1711942194833,
-    }]
   },
   render() {
     return {
@@ -36,7 +29,7 @@ export const Basic: Story = {
           diaries: [{
             id: 1,
             time: 1711942194833,
-            mode: '행복',
+            mood: '행복',
             content: '오늘은 새로운 친구를 만났다.',
             createdAt: 1711942194833,
           }]
@@ -51,7 +44,6 @@ export const Basic: Story = {
 export const nothingDiaries: Story = {
   name: '0건일 경우',
   args: {
-    diaries: []
   },
   render() {
     return {
@@ -62,7 +54,7 @@ export const nothingDiaries: Story = {
         }
       },
       template: `
-    <DiaryTimeline :diaries="diaries" />
+    <DiaryTimeline/>
   `,
     }
   }

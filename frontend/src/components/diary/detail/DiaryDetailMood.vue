@@ -1,18 +1,29 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import DiaryItem from '@/components/diary/DiaryItem.vue'
-import { DiaryMode } from '@/consts'
+import { DiaryMood } from '@/consts'
 
 export default defineComponent({
   name: 'DiaryDetailMood',
-  setup() {
-    return {
-      DiaryMode
+  props: {
+    mood: {
+      type: String,
+      required: true
     }
   },
-  data() {
+  setup() {
     return {
-      selectedMood: ''
+      DiaryMood
+    }
+  },
+  computed: {
+    selectedMood: {
+      get() {
+        return this.mood
+      },
+      set(value: string) {
+        this.$emit('update:mood', value)
+      }
     }
   },
   components: { DiaryItem }
@@ -24,19 +35,19 @@ export default defineComponent({
     <button
       class=""
       :class="{
-        'opacity-100': selectedMood === mode,
-        'opacity-50': selectedMood !== mode
+        'opacity-100': selectedMood === mood,
+        'opacity-50': selectedMood !== mood
       }"
       type="button"
       @click="
         () => {
-          selectedMood = mode
+          selectedMood = mood
         }
       "
       :key="i"
-      v-for="(mode, i) in DiaryMode"
+      v-for="(mood, i) in DiaryMood"
     >
-      <DiaryItem :is-today="false" :mode="mode" />
+      <DiaryItem :is-today="false" :mood="mood" />
     </button>
   </div>
 </template>

@@ -20,7 +20,14 @@ export const routineServerInstance = (): AxiosInstance => {
     }
   })
 
-  axios.interceptors.response.use(
+  routineApi.interceptors.request.use(
+    (config) => {
+      config.headers['Authorization'] = `Bearer ${localStorage.getItem('accessToken')}`
+      return config
+    }
+  )
+
+  routineApi.interceptors.response.use(
     (response) => {
       return response
     },

@@ -5,6 +5,7 @@ import CalendarRow from '@/components/diary/calendar/CalendarRow.vue'
 import type { DiaryProps } from '@/props'
 import SlidingModal from '@/components/modal/SlidingModal.vue'
 import DiaryDetail from '@/components/diary/DiaryDetail.vue'
+import { routineServerInstance } from '@/service'
 
 export default defineComponent({
   name: 'DiaryCalender',
@@ -12,9 +13,13 @@ export default defineComponent({
   setup() {
     const calendar = useCalendarStore()
     const detailModalRef: Ref<UnwrapRef<typeof SlidingModal | null>> = ref(null)
+    const diaryDetailRef: Ref<UnwrapRef<typeof SlidingModal | null>> = ref(null)
+    const routineServer = routineServerInstance()
     return {
       calendar,
-      detailModalRef
+      detailModalRef,
+      diaryDetailRef,
+      routineServer
     }
   },
   data(): { diaries: Array<DiaryProps>; weeks: Array<Array<DiaryProps>> } {
@@ -23,29 +28,28 @@ export default defineComponent({
         {
           id: 1,
           time: new Date('2024. 4. 20.').getTime(),
-          mode: '평범',
+          mood: '평범',
           content: '',
-          createdAt: 0
         },
         {
           id: 2,
           time: new Date('2024. 4. 21.').getTime(),
-          mode: '행복',
+          mood: '행복',
           content: '',
-          createdAt: 0
         },
         {
           id: 3,
           time: new Date('2024. 4. 22.').getTime(),
-          mode: '평온',
+          mood: '평온',
           content: '',
-          createdAt: 0
         }
       ],
       weeks: []
     }
   },
-  mounted() {
+  async mounted() {
+    const { data } = await this.routineServer.get('/diary')
+    this.diaries = data.map((el: any) => {return { ...el, time: Number(el.time) }})
     this.weeks = this.getWeeks()
     this.calendar.$subscribe((mutation) => {
       if (Array.isArray(mutation.events)) {
@@ -77,12 +81,13 @@ export default defineComponent({
           })
 
           if (diaryByStorage) {
-            return diaryByStorage
+            return JSON.parse(JSON.stringify(diaryByStorage))
           } else {
             return diary
           }
         })
       })
+      console.log(weeks)
       return weeks
     }
   }

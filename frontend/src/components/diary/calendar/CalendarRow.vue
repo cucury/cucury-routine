@@ -3,14 +3,16 @@ import { defineComponent, type PropType, type Ref, type UnwrapRef } from 'vue'
 import CalendarItem from '@/components/diary/DiaryItem.vue'
 import type { DiaryProps } from '@/props'
 import useCalendarStore from '@/stores/calendar'
-import type SlidingModal from '@/components/modal/SlidingModal.vue'
+import useDiaryStore from '@/stores/diary'
 
 export default defineComponent({
   name: 'CalendarRow',
   setup() {
-    const calendar = useCalendarStore()
+    const calendarStore = useCalendarStore()
+    const diaryStore = useDiaryStore()
     return {
-      calendar
+      calendarStore,
+      diaryStore
     }
   },
   props: {
@@ -25,7 +27,7 @@ export default defineComponent({
   },
   data() {
     return {
-      mode: '평범'
+      mood: '평범'
     }
   },
   methods: {
@@ -49,7 +51,8 @@ export default defineComponent({
           :class="{ 'opacity-50': currentMonth.getMonth() !== new Date(diary.time).getMonth() }"
           @click="
             () => {
-              calendar.setSelectedDate(new Date(diary.time))
+              calendarStore.setSelectedDate(new Date(diary.time))
+              diaryStore.setSelectedDiary(diary)
               $emit('show-modal')
             }
           "
@@ -57,7 +60,7 @@ export default defineComponent({
           v-for="(diary, i) in dates"
           :day="new Date(diary.time).getDate().toString()"
           :isToday="isToday(new Date(diary.time))"
-          :mode="diary.mode"
+          :mood="diary.mood"
         />
       </div>
     </div>

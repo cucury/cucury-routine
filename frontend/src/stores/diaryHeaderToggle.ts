@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia'
-import { getCalendarMonth } from 'mnth'
 
 export const useDiaryHeaderToggleStore = defineStore('diaryHeaderToggle', {
   state: (): { mode: 'calendar' | 'timeline'} => ({

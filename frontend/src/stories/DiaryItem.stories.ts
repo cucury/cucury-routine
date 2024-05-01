@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import CalendarItem from '@/components/diary/DiaryItem.vue'
-import { DiaryMode } from '@/consts'
+import { DiaryMood } from '@/consts'
 import useNavigation, { Navigations } from '@/stores/navi'
 import { dummyWeeks } from '@/consts'
 
@@ -23,19 +23,19 @@ export const Basic: Story = {
   name: '기본',
   args: {
     day: new Date(dummyWeeks[3][0].time).getDate().toString(),
-    mode: '',
+    mood: '',
     isToday: true
   },
   render() {
-    const mode = DiaryMode.Good
+    const mood = DiaryMood.Good
     return {
       setup() {
         const navi = useNavigation()
-        return { navi, Navigations, mode, dummyWeeks }
+        return { navi, Navigations, mood, dummyWeeks }
       },
       components: { CalendarItem },
       template: `
-    <CalendarItem :day="new Date(dummyWeeks[3][0].time).getDate().toString()" mode="" :is-today="true"  />
+    <CalendarItem :day="new Date(dummyWeeks[3][0].time).getDate().toString()" mood="" :is-today="true"  />
   `
     }
   }
@@ -44,18 +44,18 @@ export const AllCase: Story = {
   name: '기분적용',
   args: {
     day: '1',
-    mode: DiaryMode.Good,
+    mood: DiaryMood.Good,
     isToday: false
   },
   render() {
     return {
       setup() {
         const navi = useNavigation()
-        return { navi, Navigations, DiaryMode }
+        return { navi, Navigations, DiaryMood }
       },
       components: { CalendarItem },
       template: `
-        <CalendarItem :key="i" v-for="(mode,i) in DiaryMode" :day="mode" :mode="mode" :is-today="false"  />
+        <CalendarItem :key="i" v-for="(mood,i) in DiaryMood" :day="mode" :mood="mood" :is-today="false"  />
       `
     }
   }
