@@ -170,3 +170,5 @@ compile_commands.json
 
 .idea/**/*
 **/node_modules/**
+
+frontend/.env
