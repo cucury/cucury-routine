@@ -39,7 +39,7 @@ export default defineComponent({
       </div>
     </div>
     <div v-if="diaries?.length > 0" class="flex flex-col items-center gap-4">
-      <div>
+      <div class="flex flex-col">
         <div :key="i" v-for="(diary, i) in diaries.filter((el) => el.mood)">
           <TimelineItem :diary="diary" />
         </div>
