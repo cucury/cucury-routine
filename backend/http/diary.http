@@ -3,20 +3,17 @@ POST http://localhost:9000/api/v1/diary HTTP/1.1
 content-type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTQ0NTIxODQsImV4cCI6MTcxNDQ1Mjc4NH0.EpE9GpPlxIndOt_1bKAFwIMFcVOUKASMzZ9VyeskqUQ
 
-{
-  "mood": "My first diary",
-  "content": "This is my first diary. I'm so, excited!"
-}
+{"id":null,"mood":"행복","content":"해피해피해--피","time":"1714705026677"}
 
 ###
 GET http://localhost:9000/api/v1/diary HTTP/1.1
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTQ0NTIxODQsImV4cCI6MTcxNDQ1Mjc4NH0.EpE9GpPlxIndOt_1bKAFwIMFcVOUKASMzZ9VyeskqUQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTQ5NjE4OTMsImV4cCI6MTcxNDk2MjQ5M30.oUIrWQE_nAFt6hfJohGJuQq8Jbe3rAgJU-kM_qRhH5A
 
 ###
-GET http://localhost:9000/api/v1/diary/1 HTTP/1.1
+GET http://localhost:9000/api/v1/diary/2 HTTP/1.1
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFAYi5jIiwiaWF0IjoxNzE0NTQ3MDQ3LCJleHAiOjE3MTQ1NDc2NDd9.vCoKLF23raJp2CD2U4eBSjMG04uZuveZwzUORB9V-tQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTQ5NjE4OTMsImV4cCI6MTcxNDk2MjQ5M30.oUIrWQE_nAFt6hfJohGJuQq8Jbe3rAgJU-kM_qRhH5A
 
 ###
 PUT http://localhost:9000/api/v1/diary HTTP/1.1
