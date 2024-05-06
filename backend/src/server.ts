@@ -1,3 +1,4 @@
+import 'reflect-metadata'
 import express from 'express'
 import diaryRouter from './routes/diaryRoutes'
 import cors from 'cors'

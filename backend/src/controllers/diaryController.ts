@@ -2,12 +2,17 @@ import { Request, Response } from 'express'
 import { IDiaryInteractor } from '../interfaces/IDiaryInteractor'
 import { Diary } from '../entities/Diary'
 import { getUserHash } from '../utils'
+import { inject, injectable } from 'inversify'
+import { INTERFACE_TYPES } from '../utils/beanFactory'
 
-export default class DiaryController {
+@injectable()
+export class DiaryController {
 
   private interactor: IDiaryInteractor
 
-  constructor(interactor: IDiaryInteractor) {
+  constructor(
+    @inject(INTERFACE_TYPES.DiaryInteractor) interactor: IDiaryInteractor
+  ) {
     this.interactor = interactor
   }
 

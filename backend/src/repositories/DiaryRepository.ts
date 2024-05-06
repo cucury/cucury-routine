@@ -1,7 +1,9 @@
 import { Diary } from '../entities/Diary'
 import { IDiaryRepository } from '../interfaces/IDiaryRepository'
 import { Prisma, PrismaClient } from '@prisma/client'
+import { injectable } from 'inversify'
 
+@injectable()
 export class DiaryRepository implements IDiaryRepository {
 
   private prisma: Prisma
