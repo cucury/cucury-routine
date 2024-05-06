@@ -1,14 +1,11 @@
-import express, { Request, Response, NextFunction } from 'express'
-import jwt, {JsonWebTokenError} from "jsonwebtoken"
+import { NextFunction, Request, Response } from 'express'
+import jwt, { JsonWebTokenError } from 'jsonwebtoken'
 import dotenv from 'dotenv'
-import {CreateDiary, GetDiary, GetDiaryById, UpdateDiary} from "../controllers/diaryController"
 import crypto from 'crypto'
 
 dotenv.config()
 
-const router = express.Router()
-
-const authFilter = (req: Request, res: Response, next: NextFunction) => {
+export const authFilter = (req: Request, res: Response, next: NextFunction) => {
   if (req && req.headers && req.headers.authorization) {
     const authHeader = req.headers.authorization
     if (!authHeader.includes('Bearer')) {
@@ -42,11 +39,3 @@ export const getV1Path = (path: string) => {
   return `/api/v1/${path}`
 }
 
-const diaryPath = getV1Path('diary')
-
-router.post(diaryPath, authFilter, CreateDiary)
-router.get(diaryPath, authFilter, GetDiary)
-router.get(`${diaryPath}/:id`, authFilter, GetDiaryById)
-router.put(diaryPath, authFilter, UpdateDiary)
-
-export default router
