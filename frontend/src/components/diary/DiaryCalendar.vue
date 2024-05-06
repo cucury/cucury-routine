@@ -6,6 +6,7 @@ import type { DiaryProps } from '@/props'
 import SlidingModal from '@/components/modal/SlidingModal.vue'
 import DiaryDetail from '@/components/diary/DiaryDetail.vue'
 import { routineServerInstance } from '@/service'
+import useDiaryStore from '@/stores/diary'
 
 export default defineComponent({
   name: 'DiaryCalender',
@@ -15,11 +16,13 @@ export default defineComponent({
     const detailModalRef: Ref<UnwrapRef<typeof SlidingModal | null>> = ref(null)
     const diaryDetailRef: Ref<UnwrapRef<typeof SlidingModal | null>> = ref(null)
     const routineServer = routineServerInstance()
+    const diaryStore = useDiaryStore()
     return {
       calendar,
       detailModalRef,
       diaryDetailRef,
-      routineServer
+      routineServer,
+      diaryStore
     }
   },
   data(): { diaries: Array<DiaryProps>; weeks: Array<Array<DiaryProps>> } {
@@ -48,18 +51,7 @@ export default defineComponent({
     }
   },
   async mounted() {
-    const { data } = await this.routineServer.get('/diary')
-    this.diaries = data.map((el: any) => {return { ...el, time: Number(el.time) }})
-    this.weeks = this.getWeeks()
-    this.calendar.$subscribe((mutation) => {
-      if (Array.isArray(mutation.events)) {
-        // do nothing
-      } else {
-        if (mutation.events.key === 'currentMonth') {
-          this.weeks = this.getWeeks()
-        }
-      }
-    })
+    await this.fetchDiaries()
   },
   computed: {
     selectedDate() {
@@ -67,6 +59,27 @@ export default defineComponent({
     }
   },
   methods: {
+    async fetchDiaries() {
+      // fetch diaries from server
+      try {
+        const res = await this.routineServer.get('/diary')
+        if (res) {
+          this.diaries = res?.data.map((el: any) => {return { ...el, time: Number(el.time) }})
+        }
+        this.weeks = this.getWeeks()
+        this.calendar.$subscribe((mutation) => {
+          if (Array.isArray(mutation.events)) {
+            // do nothing
+          } else {
+            if (mutation.events.key === 'currentMonth') {
+              this.weeks = this.getWeeks()
+            }
+          }
+        })
+      } catch (error) {
+        console.error(error)
+      }
+    },
     getWeeks(): Array<Array<DiaryProps>> {
       let weeks: Array<Array<DiaryProps>> = []
       weeks = [...this.calendar.getWeeks()]
@@ -87,7 +100,6 @@ export default defineComponent({
           }
         })
       })
-      console.log(weeks)
       return weeks
     }
   }
@@ -116,7 +128,10 @@ export default defineComponent({
       </div>
     </div>
     <SlidingModal ref="detailModalRef" :label="selectedDate.toLocaleDateString()">
-      <DiaryDetail />
+      <DiaryDetail @close:detail='async() => {
+                     await this.fetchDiaries()
+                     detailModalRef.isShow = false
+                   }' />
     </SlidingModal>
   </div>
 </template>
