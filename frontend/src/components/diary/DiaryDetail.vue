@@ -39,14 +39,15 @@ export default defineComponent({
       if ( mutation.events.key === 'diary' && mutation.events.newValue.id > 0) {
         try {
           const res = await this.routineServer.get(`/diary/${mutation.events.newValue.id}`)
-          const data = res.data.pop()
+          const data = res.data
           this.diary = new Diary(data.id, data.mood, data.content, data.time)
-          console.log('hoge', data, this.diary)
         } catch(error) {
           console.error(error)
         }
       } else {
-        this.diary = new Diary(null, '', '', 0)
+        const today = new Date()
+        today.setHours(0, 0, 0, 0)
+        this.diary = new Diary(null, '', '', today.getTime())
       }
       this.loaded = true
     })
@@ -67,9 +68,12 @@ export default defineComponent({
         const isUpdate = this.diary.id ?? 0 > 0
         if (isUpdate) {
           await this.routineServer.put('/diary', data)
+          alert('수정되었습니다')
         } else {
           await this.routineServer.post('/diary', data)
+          alert('저장되었습니다')
         }
+        this.$emit('close:detail')
       } catch (error) {
         console.error(error)
       }

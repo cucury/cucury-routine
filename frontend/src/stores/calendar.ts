@@ -9,12 +9,12 @@ export const useCalendarStore = defineStore('calendar', {
   }),
   actions: {
     movePrev() {
-      const prev = new Date(this.currentMonth)
+      const prev = new Date(this.currentMonth.getTime())
       prev.setMonth(prev.getMonth(), 0)
       this.setMonth(prev)
     },
     moveNext() {
-      const next = new Date(this.currentMonth)
+      const next = new Date(this.currentMonth.getTime())
       next.setMonth(next.getMonth() + 2, 0)
       this.setMonth(next)
     },

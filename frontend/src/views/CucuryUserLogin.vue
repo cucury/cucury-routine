@@ -84,7 +84,6 @@ export default defineComponent({
                   email,
                   password
                 })
-                console.log(data)
                 const { accessToken, refreshToken } = data
                 window.localStorage.setItem('accessToken', accessToken)
                 window.localStorage.setItem('refreshToken', refreshToken)
