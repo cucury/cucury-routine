@@ -1,11 +1,16 @@
 import { IDiaryInteractor } from '../interfaces/IDiaryInteractor'
 import { Diary } from '../entities/Diary'
 import { IDiaryRepository } from '../interfaces/IDiaryRepository'
+import { inject, injectable } from 'inversify'
+import { INTERFACE_TYPES } from '../utils/beanFactory'
 
+@injectable()
 export class DiaryInteractor implements IDiaryInteractor {
   private repository: IDiaryRepository
 
-  constructor(repository: IDiaryRepository) {
+  constructor(
+    @inject(INTERFACE_TYPES.DiaryRepository) repository: IDiaryRepository
+  ) {
     this.repository = repository
   }
 

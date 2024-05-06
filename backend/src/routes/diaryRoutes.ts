@@ -1,14 +1,22 @@
 import express from 'express'
-import DiaryController from '../controllers/DiaryController'
 import { authFilter, getV1Path } from './index'
 import { DiaryRepository } from '../repositories/DiaryRepository'
+import { Container } from 'inversify'
+import { IDiaryRepository } from '../interfaces/IDiaryRepository'
+import { IDiaryInteractor } from '../interfaces/IDiaryInteractor'
+import { DiaryController } from '../controllers/diaryController'
 import { DiaryInteractor } from '../interactors/DiaryInteractor'
+import { INTERFACE_TYPES } from '../utils/beanFactory'
 
-const repository = new DiaryRepository()
-const interactor = new DiaryInteractor(repository)
-const controller = new DiaryController(interactor)
+const container = new Container()
+
+container.bind<IDiaryRepository>(INTERFACE_TYPES.DiaryRepository).to(DiaryRepository)
+container.bind<IDiaryInteractor>(INTERFACE_TYPES.DiaryInteractor).to(DiaryInteractor)
+container.bind<DiaryController>(INTERFACE_TYPES.DiaryController).to(DiaryController)
 
 const router = express.Router()
+
+const controller = container.get<DiaryController>(INTERFACE_TYPES.DiaryController)
 
 const diaryPath = getV1Path('diary')
 
