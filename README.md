@@ -12,10 +12,10 @@
   - 기여도 0.00001%만 이상이라면 문제 없음
 
 ## Use Case
-![](./docs/cucury-routine.usecase.drawio.svg) 
+ <img src="./docs/cucury-routine.usecase.drawio.svg" alt="" />
 
 ### Detail
-![](./docs/cucury-routine.robustness.drawio.svg) 
+ <img src="./docs/cucury-routine.robustness.drawio.svg" alt="" />
 
 ## 쿠쿠리 루틴
 - 진행중
