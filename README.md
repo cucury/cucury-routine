@@ -11,6 +11,12 @@
   - 처음에는 아--주 단순한 기능만 만들어 본다(복잡한 기능 만들지 말기!)
   - 기여도 0.00001%만 이상이라면 문제 없음
 
+## Use Case
+![](./docs/cucury-routine.usecase.drawio.svg) 
+
+### Detail
+![](./docs/cucury-routine.robustness.drawio.svg) 
+
 ## 쿠쿠리 루틴
 - 진행중
 ## 쿠쿠리 디데이
