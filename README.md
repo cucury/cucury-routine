@@ -14,7 +14,7 @@
 ## Use Case
 <!DOCTYPE html>
 <html>
-<body>
+<body style="background-color: white;">
  <img src="./docs/cucury-routine.usecase.drawio.svg" alt="" />
 
  <img src="./docs/cucury-routine.robustness.drawio.svg" alt="" />
