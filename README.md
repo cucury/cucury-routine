@@ -12,20 +12,18 @@
   - 기여도 0.00001%만 이상이라면 문제 없음
 
 ## Use Case
-<!DOCTYPE html>
-<html>
-<body style="background-color: white;">
- <img src="./docs/cucury-routine.usecase.drawio.svg" alt="" />
+![](./docs/cucury-routine.usecase.png) 
 
- <img src="./docs/cucury-routine.robustness.drawio.svg" alt="" />
-</body>
-</html>
+### Detail
+![](./docs/cucury-routine.robustness.png) 
 
 ## 쿠쿠리 루틴
 - 진행중
 ## 쿠쿠리 디데이
 - 진행중
 ## 쿠쿠리 일기
+
+![](./docs/diary.domain.png)
 
 ### 개요
 - 항상 일기쓰기는 작심삼일
