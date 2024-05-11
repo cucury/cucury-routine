@@ -1,0 +1,74 @@
+<mxfile host="65bd71144e">
+    <diagram id="oO2VZReja8ii3TEHFWUc" name="페이지-1">
+        <mxGraphModel dx="1940" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="380" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="signup" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="160" y="200" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="login" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="380" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="get diary" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="810" y="242.5" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="add diary" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="820" y="382.5" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="endArrow=open;endFill=1;endSize=12;html=1;" edge="1" parent="1" target="3">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="100" y="390" as="sourcePoint"/>
+                        <mxPoint x="280" y="370" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="" style="endArrow=open;endFill=1;endSize=12;html=1;entryX=-0.021;entryY=0.614;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="4">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="110" y="400" as="sourcePoint"/>
+                        <mxPoint x="212.92913266245387" y="277.2768033639975" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="&amp;lt;&amp;lt; with auth &amp;gt;&amp;gt;" style="endArrow=open;endFill=1;endSize=12;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="5">
+                    <mxGeometry x="-0.0012" width="160" relative="1" as="geometry">
+                        <mxPoint x="660" y="390" as="sourcePoint"/>
+                        <mxPoint x="760" y="352.5" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="&amp;lt;&amp;lt; with auth &amp;gt;&amp;gt;" style="endArrow=open;endFill=1;endSize=12;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="6">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="660" y="420" as="sourcePoint"/>
+                        <mxPoint x="760" y="442.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="" style="endArrow=open;endFill=1;endSize=12;html=1;" edge="1" parent="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="240" y="280" as="sourcePoint"/>
+                        <mxPoint x="280" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="update diary" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="810" y="507.5" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="authoization" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="390" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="endArrow=open;endFill=1;endSize=12;html=1;" edge="1" parent="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="369.9999999999998" y="420" as="sourcePoint"/>
+                        <mxPoint x="490" y="420" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="&amp;lt;&amp;lt; with auth &amp;gt;&amp;gt;" style="endArrow=open;endFill=1;endSize=12;html=1;" edge="1" parent="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="660" y="455" as="sourcePoint"/>
+                        <mxPoint x="800" y="530" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
