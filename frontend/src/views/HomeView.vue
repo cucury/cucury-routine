@@ -30,7 +30,7 @@ export default {
 <template>
   <main>
     <div>
-      <div class="flex justify-between items-center bg-white px-2 py-1">
+      <div class="flex justify-between items-center bg-gray-50 px-2 py-1">
         <div class="flex">
           <img
             class="w-6 h-6 mr-2 rounded-full"
@@ -49,11 +49,13 @@ export default {
           로그아웃
         </button>
       </div>
-      <CucuryRoutineHome v-if="navi.tab === Navigations.Home" />
-      <CucuryRoutineContent v-if="navi.tab === Navigations.Routine" />
-      <CucuryRoutineDDay v-if="navi.tab === Navigations.DDay" />
-      <CucuryRoutineDiary v-if="navi.tab === Navigations.Diary" />
-      <CucuryRoutineNavi />
+      <div class='bg-gray-50 h-[calc(100vh_-_120px)]'>
+        <CucuryRoutineHome v-if="navi.tab === Navigations.Home" />
+        <CucuryRoutineContent v-if="navi.tab === Navigations.Routine" />
+        <CucuryRoutineDDay v-if="navi.tab === Navigations.DDay" />
+        <CucuryRoutineDiary v-if="navi.tab === Navigations.Diary" />
+        <CucuryRoutineNavi />
+      </div>
     </div>
   </main>
 </template>

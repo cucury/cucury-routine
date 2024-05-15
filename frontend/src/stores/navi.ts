@@ -14,7 +14,7 @@ const Navigations: NavigationsProps = {
 }
 export const useNaviStore = defineStore('navigation', {
   state: () => ({
-    tab: Navigations.Diary,
+    tab: Navigations.Routine,
   }),
   actions: {
     setTab(navi: number) {
