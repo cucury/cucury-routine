@@ -12,7 +12,7 @@ const meta = {
     // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
     // onClick: fn(),
   }
-} satisfies Meta<typeof HomeView>
+} satisfies as Meta<typeof HomeView>
 
 export default meta
 type Story = StoryObj<typeof meta>

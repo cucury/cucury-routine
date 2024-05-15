@@ -5,15 +5,17 @@ import { getDayLabel } from '@/service'
 
 export default defineComponent({
   name: 'TimelineItem',
+  setup() {
+    return {
+      getDayLabel
+    }
+  },
   props: {
     diary: {
       type: Object as PropType<DiaryProps>,
       required: true
     }
   },
-  methods: {
-    getDayLabel
-  }
 })
 </script>
 
