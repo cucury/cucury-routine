@@ -1,281 +1,282 @@
-<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1781px" height="911px" viewBox="-0.5 -0.5 1781 911" content="&lt;mxfile&gt;&lt;diagram id=&quot;finoyUQgV0wyMH6WQuIo&quot; name=&quot;페이지-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;">
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1932px" height="1041px" viewBox="-0.5 -0.5 1932 1041" content="&lt;mxfile&gt;&lt;diagram id=&quot;finoyUQgV0wyMH6WQuIo&quot; name=&quot;페이지-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;">
     <defs/>
     <g>
-        <rect x="703" y="140" width="110" height="50" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
+        <rect x="0" y="0" width="1930" height="1040" rx="10.4" ry="10.4" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="737" y="180" width="110" height="50" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="757.5" y="169.5">
+            <text x="791.5" y="209.5">
                 루틴
             </text>
         </g>
-        <rect x="1024.5" y="570" width="110" height="50" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
+        <rect x="1058.5" y="610" width="110" height="50" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1079" y="599.5">
+            <text x="1113" y="639.5">
                 유저 루틴
             </text>
         </g>
-        <rect x="254" y="549" width="110" height="50" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
+        <rect x="288" y="589" width="110" height="50" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="308.5" y="578.5">
+            <text x="342.5" y="618.5">
                 공유 루틴 템플렛
             </text>
         </g>
-        <rect x="779.5" y="790" width="110" height="50" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
+        <rect x="813.5" y="830" width="110" height="50" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="834" y="819.5">
+            <text x="868" y="859.5">
                 유저 루틴 그룹
             </text>
         </g>
-        <rect x="0" y="645" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="34" y="685" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="54.5" y="674.5">
+            <text x="88.5" y="714.5">
                 ID
             </text>
         </g>
-        <rect x="743.5" y="645" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="777.5" y="685" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="798" y="674.5">
+            <text x="832" y="714.5">
                 ID
             </text>
         </g>
-        <rect x="716" y="860" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="750" y="900" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="770.5" y="889.5">
+            <text x="804.5" y="929.5">
                 ID
             </text>
         </g>
-        <rect x="1283.5" y="645" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="1317.5" y="685" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1338" y="674.5">
+            <text x="1372" y="714.5">
                 시작
             </text>
         </g>
-        <rect x="1413.5" y="645" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="1447.5" y="685" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1468" y="674.5">
+            <text x="1502" y="714.5">
                 종료
             </text>
         </g>
-        <rect x="381.5" y="645" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="415.5" y="685" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="436" y="674.5">
+            <text x="470" y="714.5">
                 루틴 설명
             </text>
         </g>
-        <rect x="843" y="860" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="877" y="900" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="897.5" y="889.5">
+            <text x="931.5" y="929.5">
                 유저 식별
             </text>
         </g>
-        <rect x="1149.5" y="645" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="1183.5" y="685" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1204" y="674.5">
+            <text x="1238" y="714.5">
                 요일
             </text>
         </g>
-        <rect x="869.5" y="645" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="903.5" y="685" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="924" y="674.5">
+            <text x="958" y="714.5">
                 유저 루틴 그룹 ID
             </text>
         </g>
-        <rect x="1539.5" y="645" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="1573.5" y="685" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1594" y="674.5">
+            <text x="1628" y="714.5">
                 알람시간
             </text>
         </g>
-        <rect x="1669.5" y="645" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="1703.5" y="685" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1724" y="674.5">
+            <text x="1758" y="714.5">
                 반복
             </text>
         </g>
-        <rect x="130" y="300" width="110" height="50" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
+        <rect x="164" y="340" width="110" height="50" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="184.5" y="329.5">
+            <text x="218.5" y="369.5">
                 공유 루틴 그룹 템플렛
             </text>
         </g>
-        <rect x="0" y="380" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="34" y="420" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="54.5" y="409.5">
+            <text x="88.5" y="449.5">
                 ID
             </text>
         </g>
-        <rect x="130" y="380" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="164" y="420" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="184.5" y="409.5">
+            <text x="218.5" y="449.5">
                 이름
             </text>
         </g>
-        <rect x="254" y="380" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="288" y="420" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="308.5" y="409.5">
+            <text x="342.5" y="449.5">
                 색깔
             </text>
         </g>
-        <rect x="508.5" y="645" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="542.5" y="685" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="563" y="674.5">
+            <text x="597" y="714.5">
                 공개 여부
             </text>
         </g>
-        <rect x="979.5" y="860" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="1013.5" y="900" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1034" y="889.5">
+            <text x="1068" y="929.5">
                 이름
             </text>
         </g>
-        <rect x="1103.5" y="860" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="1137.5" y="900" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1158" y="889.5">
+            <text x="1192" y="929.5">
                 색깔
             </text>
         </g>
-        <path d="M 0 0 L 370 0 L 400 30 L 400 290 L 0 290 L 0 0 Z" fill="#fff2cc" stroke="#d6b656" stroke-miterlimit="10" pointer-events="all"/>
-        <path d="M 370 0 L 370 30 L 400 30 Z" fill-opacity="0.05" fill="#000000" stroke="none" pointer-events="all"/>
-        <path d="M 370 0 L 370 30 L 400 30" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 34 40 L 404 40 L 434 70 L 434 330 L 34 330 L 34 40 Z" fill="#fff2cc" stroke="#d6b656" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 404 40 L 404 70 L 434 70 Z" fill-opacity="0.05" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 404 40 L 404 70 L 434 70" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="17px">
-            <text x="1.5" y="22.5">
+            <text x="35.5" y="62.5">
                 설계에서 필요한 부분
             </text>
-            <text x="1.5" y="62.5">
+            <text x="35.5" y="102.5">
                 레벨1
             </text>
-            <text x="1.5" y="82.5">
+            <text x="35.5" y="122.5">
                 - 루틴을 등록 할 수 있어야 한다.
             </text>
-            <text x="1.5" y="102.5">
+            <text x="35.5" y="142.5">
                 - 루틴의 완료를 기록할 수 있어야 한다.
             </text>
-            <text x="1.5" y="122.5">
+            <text x="35.5" y="162.5">
                 - 루틴 그룹의 색상을 지정할 수 있어야 한다.
             </text>
-            <text x="1.5" y="162.5">
+            <text x="35.5" y="202.5">
                 레벨2
             </text>
-            <text x="1.5" y="182.5">
+            <text x="35.5" y="222.5">
                 - 루틴을 그룹 단위로 묶을 수 있어야 한다.
             </text>
-            <text x="1.5" y="202.5">
+            <text x="35.5" y="242.5">
                 - 루틴의 요일은 복수로 등록이 가능해야한다.
             </text>
-            <text x="1.5" y="242.5">
+            <text x="35.5" y="282.5">
                 레벨3
             </text>
-            <text x="1.5" y="262.5">
+            <text x="35.5" y="302.5">
                 - 템플릿을 다른유저와 공유를 할 수 있어야 한다.
             </text>
         </g>
-        <rect x="1099.5" y="330" width="110" height="50" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
+        <rect x="1133.5" y="370" width="110" height="50" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1154" y="359.5">
+            <text x="1188" y="399.5">
                 루틴 기록
             </text>
         </g>
-        <rect x="1029.5" y="415" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="1063.5" y="455" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1084" y="444.5">
+            <text x="1118" y="484.5">
                 유저 루틴 ID
             </text>
         </g>
-        <rect x="1159.5" y="415" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="1193.5" y="455" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1214" y="444.5">
+            <text x="1248" y="484.5">
                 루틴 완료 일시
             </text>
         </g>
-        <path d="M 969.5 780 L 1148.34 697.08" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 1153.11 694.87 L 1148.23 700.99 L 1148.34 697.08 L 1145.28 694.64 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
-        <rect x="939.5" y="760" width="60" height="40" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 1003.5 820 L 1182.34 737.08" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1187.11 734.87 L 1182.23 740.99 L 1182.34 737.08 L 1179.28 734.64 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="973.5" y="800" width="60" height="40" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="969" y="784.5">
+            <text x="1003" y="824.5">
                 0:일
             </text>
         </g>
-        <path d="M 1049.5 780 L 1171.35 699.61" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 1175.74 696.72 L 1171.82 703.49 L 1171.35 699.61 L 1167.97 697.65 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
-        <rect x="1019.5" y="760" width="60" height="40" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 1083.5 820 L 1205.35 739.61" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1209.74 736.72 L 1205.82 743.49 L 1205.35 739.61 L 1201.97 737.65 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="1053.5" y="800" width="60" height="40" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1049" y="784.5">
+            <text x="1083" y="824.5">
                 1:월
             </text>
         </g>
-        <path d="M 1127.5 780 L 1186.97 702.79" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 1190.18 698.64 L 1188.68 706.32 L 1186.97 702.79 L 1183.13 702.05 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
-        <rect x="1097.5" y="760" width="60" height="40" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 1161.5 820 L 1220.97 742.79" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1224.18 738.64 L 1222.68 746.32 L 1220.97 742.79 L 1217.13 742.05 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="1131.5" y="800" width="60" height="40" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1127" y="784.5">
+            <text x="1161" y="824.5">
                 2:화
             </text>
         </g>
-        <path d="M 1209.5 780 L 1203.75 700.75" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 1203.37 695.52 L 1207.37 702.24 L 1203.75 700.75 L 1200.39 702.75 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
-        <rect x="1179.5" y="760" width="60" height="40" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 1243.5 820 L 1237.75 740.75" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1237.37 735.52 L 1241.37 742.24 L 1237.75 740.75 L 1234.39 742.75 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="1213.5" y="800" width="60" height="40" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1209" y="784.5">
+            <text x="1243" y="824.5">
                 3:수
             </text>
         </g>
-        <path d="M 1283.5 780 L 1215.02 700.09" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 1211.61 696.1 L 1218.82 699.14 L 1215.02 700.09 L 1213.5 703.69 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
-        <rect x="1253.5" y="760" width="60" height="40" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 1317.5 820 L 1249.02 740.09" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1245.61 736.1 L 1252.82 739.14 L 1249.02 740.09 L 1247.5 743.69 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="1287.5" y="800" width="60" height="40" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1283" y="784.5">
+            <text x="1317" y="824.5">
                 4:목
             </text>
         </g>
-        <path d="M 1360.5 780 L 1231.24 699.47" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 1226.79 696.69 L 1234.58 697.42 L 1231.24 699.47 L 1230.88 703.36 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
-        <rect x="1330.5" y="760" width="60" height="40" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 1394.5 820 L 1265.24 739.47" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1260.79 736.69 L 1268.58 737.42 L 1265.24 739.47 L 1264.88 743.36 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="1364.5" y="800" width="60" height="40" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1360" y="784.5">
+            <text x="1394" y="824.5">
                 5:금
             </text>
         </g>
-        <path d="M 1439.5 780 L 1250.82 697.79" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 1246 695.7 L 1253.82 695.28 L 1250.82 697.79 L 1251.02 701.7 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
-        <rect x="1409.5" y="760" width="60" height="40" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 1473.5 820 L 1284.82 737.79" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1280 735.7 L 1287.82 735.28 L 1284.82 737.79 L 1285.02 741.7 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="1443.5" y="800" width="60" height="40" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1439" y="784.5">
+            <text x="1473" y="824.5">
                 6:토
             </text>
         </g>
-        <rect x="254" y="645" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="288" y="685" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="308.5" y="674.5">
+            <text x="342.5" y="714.5">
                 루틴 제목
             </text>
         </g>
-        <rect x="1009.5" y="645" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="1043.5" y="685" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="1064" y="674.5">
+            <text x="1098" y="714.5">
                 루틴 제목
             </text>
         </g>
-        <path d="M 1079.5 570 L 1080.61 491.98" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 1080.97 466.99 L 1088.14 479.59 L 1080.61 491.98 L 1073.44 479.38 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 1113.5 610 L 1114.61 531.98" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1114.97 506.99 L 1122.14 519.59 L 1114.61 531.98 L 1107.44 519.38 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <rect fill="rgb(255, 255, 255)" stroke="none" x="1071" y="511" width="19" height="15" stroke-width="0"/>
-            <text x="1079.75" y="522.01">
+            <rect fill="rgb(255, 255, 255)" stroke="none" x="1105" y="551" width="19" height="15" stroke-width="0"/>
+            <text x="1113.75" y="562.01">
                 1:1
             </text>
         </g>
-        <path d="M 834.5 790 L 874.57 717.17" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 886.62 695.26 L 887.04 709.76 L 874.57 717.17 L 874.16 702.67 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 868.5 830 L 908.57 757.17" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 920.62 735.26 L 921.04 749.76 L 908.57 757.17 L 908.16 742.67 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <rect fill="rgb(255, 255, 255)" stroke="none" x="851" y="735" width="21" height="15" stroke-width="0"/>
-            <text x="860.51" y="746.31">
+            <rect fill="rgb(255, 255, 255)" stroke="none" x="885" y="775" width="21" height="15" stroke-width="0"/>
+            <text x="894.51" y="786.31">
                 1:N
             </text>
         </g>
-        <rect x="130" y="645" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="164" y="685" width="110" height="50" fill="rgb(251, 251, 251)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
-            <text x="184.5" y="667.5">
+            <text x="218.5" y="707.5">
                 공유 루틴 그룹
             </text>
-            <text x="184.5" y="681.5">
+            <text x="218.5" y="721.5">
                 템플렛 ID
             </text>
         </g>
