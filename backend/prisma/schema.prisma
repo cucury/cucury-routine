@@ -16,7 +16,7 @@ model diary {
 }
 
 model routine_group_by_user {
-  id                    BigInt                  @id(map: "routine_group_user_work_pk") @default(autoincrement())
+  id                    Int                     @id(map: "routine_group_user_work_pk") @default(autoincrement())
   user_hash             String
   name                  String
   color                 String
@@ -24,21 +24,22 @@ model routine_group_by_user {
 }
 
 model routine_items_by_user {
-  id                       BigInt                    @id(map: "routine_items_by_user_pk")
-  routine_group_by_user_id BigInt
+  id                       Int                       @id(map: "routine_items_by_user_pk") @default(autoincrement())
+  routine_group_by_user_id Int?
   title                    String
-  day_for_week             String
-  start_at                 DateTime?                 @db.Date
-  end_at                   DateTime?                 @db.Date
+  day_of_week              String
+  start_at                 String?
+  end_at                   String?
   alarm_time               String?
-  loop_at                  DateTime?                 @db.Date
-  routine_group_by_user    routine_group_by_user     @relation(fields: [routine_group_by_user_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "routine_items_by_user_routine_group_by_user_id_fk")
+  loop_at                  String?
+  user_hash                String
+  routine_group_by_user    routine_group_by_user?    @relation(fields: [routine_group_by_user_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "routine_items_by_user_routine_group_by_user_id_fk")
   routine_items_meta_data  routine_items_meta_data[] @ignore
 }
 
 /// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
 model routine_items_meta_data {
-  routine_items_user_work_id BigInt
+  routine_items_user_work_id Int
   complete_at                DateTime              @db.Date
   routine_items_by_user      routine_items_by_user @relation(fields: [routine_items_user_work_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "routine_items_meta_data_routine_items_by_user_id_fk")
 
@@ -46,13 +47,13 @@ model routine_items_meta_data {
 }
 
 model routine_shared_group_mast {
-  id    BigInt  @id(map: "routine_group_shared_template_pk") @default(autoincrement())
+  id    Int     @id(map: "routine_group_shared_template_pk") @default(autoincrement())
   name  String
   color String?
 }
 
 model routine_shared_items_mast {
-  id          BigInt    @id(map: "routine_items_share_template_pk") @default(autoincrement())
+  id          Int       @id(map: "routine_items_share_template_pk") @default(autoincrement())
   title       String?
   description String?
   public_at   DateTime? @db.Date

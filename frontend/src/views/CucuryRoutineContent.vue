@@ -1,7 +1,6 @@
 <script lang="ts">
 import {defineComponent} from "vue"
 import CucuryRoutineDetail from "@/components/routine/CucuryRoutineDetail.vue"
-import CucuryRoutineItemList from "@/components/routine/CucuryRoutineItemList.vue"
 import CucuryRoutineTemplateList from "@/components/routine/CucuryRoutineTemplateList.vue"
 import CucuryTimeStatus from "@/components/routine/CucuryTimeStatus.vue"
 

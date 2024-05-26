@@ -5,7 +5,7 @@ import { Container } from 'inversify'
 import { IDiaryRepository } from '../interfaces/IDiaryRepository'
 import { IDiaryInteractor } from '../interfaces/IDiaryInteractor'
 import { DiaryController } from '../controllers/diaryController'
-import { DiaryInteractor } from '../interactors/DiaryInteractor'
+import { DiaryInteractor } from '../interactors/diary/DiaryInteractor'
 import { INTERFACE_TYPES } from '../utils/beanFactory'
 
 const container = new Container()

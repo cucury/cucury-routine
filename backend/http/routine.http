@@ -1,0 +1,42 @@
+###
+POST http://localhost:9000/api/v1/routine HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTY3MzQ0NzIsImV4cCI6MTcxNjczNTA3Mn0.alZsjZ7_fWr3n0OuMjryWDHQJeuBLG3_HlzCp_UuKMc
+
+{
+"id": null,
+"group": {
+  "id": null,
+  "name": "기본",
+  "color": "indigo"
+},
+"title": "예-이! 첫 루틴",
+"dayOfWeek": "1,2,3,4,5",
+"startAt": "1714400800000",
+"endAt": "1714402800000",
+"alarmTime": "1714401800000",
+"loopAt": "1714401800000"
+}
+
+###
+GET http://localhost:9000/api/v1/routine HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTY3MzYyMDYsImV4cCI6MTcxNjczNjgwNn0.wkHbrbTtGMeGVYtLNs19Kk6nvVPxtmatFcMw7-xd3JI
+
+###
+GET http://localhost:9000/api/v1/routine/1 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTY3MzYyMDYsImV4cCI6MTcxNjczNjgwNn0.wkHbrbTtGMeGVYtLNs19Kk6nvVPxtmatFcMw7-xd3JI
+
+###
+PUT http://localhost:9000/api/v1/routine HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTY3MzYyMDYsImV4cCI6MTcxNjczNjgwNn0.wkHbrbTtGMeGVYtLNs19Kk6nvVPxtmatFcMw7-xd3JI
+
+{
+  "id": 19,
+  "mood": "행복111",
+  "content": "해피해피해--피",
+  "user_hash": "4c3d30db18c7e79e27be78c175b7c0a6",
+  "time": "1714705026677"
+}

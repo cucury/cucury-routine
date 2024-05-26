@@ -1,4 +1,5 @@
 import type { DiaryProps } from '@/props'
+import type { Routine, RoutineGroup } from './Routine'
 
 export class Diary implements DiaryProps {
   constructor(id: number|null, mood: string, content: string, time: number) {
@@ -13,3 +14,5 @@ export class Diary implements DiaryProps {
   time
 
 }
+
+export { Routine, RoutineGroup }
