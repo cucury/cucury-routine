@@ -1,8 +1,8 @@
-import { IDiaryInteractor } from '../interfaces/IDiaryInteractor'
-import { Diary } from '../entities/Diary'
-import { IDiaryRepository } from '../interfaces/IDiaryRepository'
+import { IDiaryInteractor } from '../../interfaces/IDiaryInteractor'
+import { Diary } from '../../entities/Diary'
+import { IDiaryRepository } from '../../interfaces/IDiaryRepository'
 import { inject, injectable } from 'inversify'
-import { INTERFACE_TYPES } from '../utils/beanFactory'
+import { INTERFACE_TYPES } from '../../utils/beanFactory'
 
 @injectable()
 export class DiaryInteractor implements IDiaryInteractor {
