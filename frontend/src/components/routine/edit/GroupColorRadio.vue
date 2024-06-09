@@ -29,7 +29,6 @@ export default defineComponent ({
     newGroup: {
       get() { return this.group },
       set(value: RoutineGroup) {
-        console.log(value)
         this.$emit('update:group', value)
       }
     }

@@ -18,6 +18,7 @@ export class Routine {
   alarmTime?:string
   loopAt?:Date
   completedDt?:string
+  isCompleted?:boolean
 
   get _dayOfWeek(): number[] {
     return this.dayOfWeek.split(",").map(s => Number(s))

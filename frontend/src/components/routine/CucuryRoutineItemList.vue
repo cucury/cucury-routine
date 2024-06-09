@@ -47,7 +47,6 @@ export default {
   },
   mounted() {
     this.weeks = this.getWeeks(this.currentTime)
-    console.log(this.currentTime)
     this.$emit("update:current-time", this.currentTime)
   },
   methods: {

@@ -23,8 +23,8 @@ export default {
   name: 'CucuryCheckbox',
   props: {
     value: {
-      type: String,
-      default: ''
+      type: Boolean,
+      default: false
     },
     label: {
       type: String,
