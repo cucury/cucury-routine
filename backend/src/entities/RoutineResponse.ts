@@ -6,13 +6,13 @@ export class RoutineResponse {
   routineGroup?: RoutineGroupResponse
   title: string
   dayOfWeek: string
-  startAt: string
-  endAt: string
-  alarmTime: string
-  loopAt: string
+  startAt?: string
+  endAt?: string
+  alarmTime?: string
+  loopAt?: string
 
   constructor(routine: Routine) {
-    const { id, routine_group_by_user, title, day_of_week, start_at, end_at, alarm_time, loop_at } = routine
+    const { id, routine_group_by_user, title, day_of_week, start_at, end_at, alarm_time, loop_at, completed_at } = routine
     this.id = id
     this.routineGroup = new RoutineGroupResponse(<RoutineGroupResponse>{
       id: routine_group_by_user?.id,

@@ -8,7 +8,10 @@ export default {
   plugins: [],
   safelist: [
     {
-      pattern: /bg-(\*)-500/,
+      pattern: /bg-(slate|red|orange|emerald|sky|indigo|rose|lime|amber|purple)-500/,
+    },
+    {
+      pattern: /text-(slate|red|orange|emerald|sky|indigo|rose|lime|amber|purple)-500/,
     }
   ]
 }

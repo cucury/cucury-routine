@@ -5,10 +5,11 @@ export class Routine {
   routine_group_by_user_id: number
   title: string
   day_of_week: string
-  start_at: string
-  end_at: string
-  alarm_time: string
-  loop_at: string
+  start_at?: string
+  end_at?: string
+  alarm_time?: string
+  loop_at?: string
+  completed_at?: string
   user_hash: string
   routine_group_by_user?: RoutineGroup
 
@@ -22,6 +23,7 @@ export class Routine {
     alarm_time,
     loop_at,
     user_hash,
+    completed_at
   }: Routine) {
     if (id) {
       this.id = id
@@ -34,6 +36,7 @@ export class Routine {
     this.alarm_time = alarm_time
     this.loop_at = loop_at
     this.user_hash = user_hash
+    this.completed_at = completed_at
   }
 
 }

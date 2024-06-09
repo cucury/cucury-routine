@@ -34,16 +34,16 @@ model routine_items_by_user {
   loop_at                  String?
   user_hash                String
   routine_group_by_user    routine_group_by_user?    @relation(fields: [routine_group_by_user_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "routine_items_by_user_routine_group_by_user_id_fk")
-  routine_items_meta_data  routine_items_meta_data[] @ignore
+  routine_items_meta_data  routine_items_meta_data[]
 }
 
-/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
 model routine_items_meta_data {
   routine_items_user_work_id Int
-  complete_at                DateTime              @db.Date
+  completed_dt               String
+  id                         Int                   @id(map: "routine_items_meta_data_pk") @default(autoincrement())
   routine_items_by_user      routine_items_by_user @relation(fields: [routine_items_user_work_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "routine_items_meta_data_routine_items_by_user_id_fk")
 
-  @@ignore
+  @@unique([routine_items_user_work_id, completed_dt], map: "routine_items_meta_data_pk_2")
 }
 
 model routine_shared_group_mast {

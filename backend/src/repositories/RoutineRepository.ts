@@ -20,10 +20,10 @@ export class RoutineRepository implements IRoutineRepository {
   }
 
   async find(userHash: string): Promise<Routine[]> {
-    return this.prisma.routine_items_by_user.findMany({ where: { user_hash: userHash }, include: { routine_group_by_user: true } })
+    return this.prisma.routine_items_by_user.findMany({ where: { user_hash: userHash }, include: { routine_group_by_user: true, routine_items_meta_data: true } })
   }
 
   async findById(id: number, userHash: string): Promise<Routine> {
-    return this.prisma.routine_items_by_user.findFirst({ where: { user_hash: userHash, id }, include: { routine_group_by_user: true } })
+    return this.prisma.routine_items_by_user.findFirst({ where: { user_hash: userHash, id }, include: { routine_group_by_user: true, routine_items_meta_data: true } })
   }
 }

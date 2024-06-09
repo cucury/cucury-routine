@@ -1,0 +1,15 @@
+###
+GET http://localhost:9000/api/v1/routine-group HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTc4MzczMDIsImV4cCI6MTcxNzgzNzkwMn0.F2HwSymxvf6dR9-TnMSfRzwOHtqG_MdD6vdSMrkfkSo
+
+
+###
+GET http://localhost:9000/api/v1/routine-group/1 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTc4MzQyMzEsImV4cCI6MTcxNzgzNDgzMX0.sUmtcp1Yrf8fSQd2eWBxfcz8PRmXVR_nnUeSYKhK9N0
+
+
+
+
+

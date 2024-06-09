@@ -4,3 +4,4 @@ export interface DiaryProps {
   mood: string
   time: number
 }
+
