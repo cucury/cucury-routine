@@ -109,9 +109,9 @@ export default {
   computed: {
     currentDt() {
       if (this.currentTime) {
-        return new Date(this.currentTime).toISOString().split("T").shift()
+        return new Date(this.currentTime).toLocaleDateString('sv-SE')
       } else {
-        return new Date().toISOString().split("T").shift()
+        return new Date().toLocaleDateString('sv-SE')
       }
     }
   },
