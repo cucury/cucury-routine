@@ -11,7 +11,7 @@ export default defineComponent({
   },
   data() {
     return {
-      isShow: true
+      isShow: false
     }
   }
 })
