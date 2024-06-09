@@ -8,4 +8,7 @@ export const INTERFACE_TYPES = {
   RoutineGroupController: Symbol.for('RoutineGroupController'),
   RoutineGroupInteractor: Symbol.for('RoutineGroupInteractor'),
   RoutineGroupRepository: Symbol.for('RoutineGroupRepository'),
+  RoutineMetaDataController: Symbol.for('RoutineMetaDataController'),
+  RoutineMetaDataInteractor: Symbol.for('RoutineMetaDataInteractor'),
+  RoutineMetaDataRepository: Symbol.for('RoutineMetaDataRepository'),
 }

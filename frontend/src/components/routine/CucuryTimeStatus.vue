@@ -1,5 +1,10 @@
 <template>
-  <CucuryRoutineItemList />
+  <CucuryRoutineItemList
+    @update:current-time='(time) => {
+      this.currentTime = time
+      this.$emit("update:current-time", time)
+    }'
+  />
 </template>
 
 <script>
@@ -8,6 +13,11 @@ export default {
   name: 'CucuryTimeStatus',
   components: {
     CucuryRoutineItemList
+  },
+  data() {
+    return {
+      currentTime: null
+    }
   }
 }
 </script>

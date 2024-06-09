@@ -10,18 +10,23 @@ export default defineComponent({
     CucuryRoutineDetail,
     CucuryRoutineTemplateList,
     CucuryTimeStatus
+  },
+  data(): {
+    currentTime: number | null
+  } {
+    return {
+      currentTime: null
+    }
   }
 })
 </script>
 
 <template>
   <div class='flex flex-col justify-center items-center gap-6'>
-    <CucuryTimeStatus />
-    <CucuryRoutineDetail />
+    <CucuryTimeStatus @update:current-time='(time) => { this.currentTime = time }' />
+    <CucuryRoutineDetail :currentTime='this.currentTime' />
+    <!--
     <CucuryRoutineTemplateList />
+    -->
   </div>
 </template>
-
-<style scoped>
-
-</style>

@@ -13,6 +13,7 @@
           :isSelected='v === currentTime'
           @click='() => {
             this.currentTime = new Date(v).getTime()
+            this.$emit("update:current-time", this.currentTime)
            }' />
       </div>
     </div>
@@ -46,18 +47,22 @@ export default {
   },
   mounted() {
     this.weeks = this.getWeeks(this.currentTime)
+    console.log(this.currentTime)
+    this.$emit("update:current-time", this.currentTime)
   },
   methods: {
     prevWeek() {
       const prevDate = new Date(this.currentTime)
       prevDate.setDate(prevDate.getDate() - 7)
       this.currentTime = prevDate.getTime()
+      this.$emit("update:current-time", this.currentTime)
       this.weeks = this.getWeeks(prevDate.getTime())
     },
     nextWeek() {
       const nextDate = new Date(this.currentTime)
       nextDate.setDate(nextDate.getDate() + 7)
       this.currentTime = nextDate.getTime()
+      this.$emit("update:current-time", this.currentTime)
       this.weeks = this.getWeeks(nextDate.getTime())
     },
     getWeeks(time: number) {

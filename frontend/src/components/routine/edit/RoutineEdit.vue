@@ -21,7 +21,7 @@
           </div>
           <button
             class='px-2 py-1 rounded-full text-xs bg-lime-500 border border-lime-600 text-white cursor-pointer'
-            @click='() => { routine.dayForWeek = [1, 2, 3, 4, 5] }'
+            @click='() => { routine._dayOfWeek = [1, 2, 3, 4, 5] }'
           >
             매일
           </button>
@@ -36,14 +36,14 @@
               type='checkbox'
               class='hidden'
               :value='day'
-              v-model='routine.dayForWeek'
+              v-model='routine._dayOfWeek'
             />
             <label
               :for='"day"+i'
               class='p-2 border rounded-lg cursor-pointer w-8 h-8 flex justify-center items-center'
               :class='{
-                "bg-lime-500 text-white": routine.dayForWeek.includes(day),
-                "bg-gray-200 text-black": !routine.dayForWeek.includes(day)
+                "bg-lime-500 text-white": routine._dayOfWeek.includes(day),
+                "bg-gray-200 text-black": !routine._dayOfWeek.includes(day)
 
               }'
             >
@@ -61,12 +61,12 @@
             그룹
           </div>
           <div class='flex flex-col items-end'>
-            <div :class='{ "hidden": !isGroupOpen}'>{{ routine.routineGroupByUser.name ?? '그룹 없음' }} 🔽</div>
-            <div :class='{ "hidden": isGroupOpen}'>{{ routine.routineGroupByUser.name ?? '그룹 없음' }} 🔼</div>
+            <div :class='{ "hidden": !isGroupOpen}'>{{ routine.group.name ?? '그룹 없음' }} 🔽</div>
+            <div :class='{ "hidden": isGroupOpen}'>{{ routine.group.name ?? '그룹 없음' }} 🔼</div>
           </div>
         </a>
         <div :class='{ "hidden": !isGroupOpen }'>
-          <div class='flex gap-2'>
+          <div class='flex flex-wrap gap-4'>
             <div
               :key='i'
               v-for='(group, i) in groups'
@@ -76,15 +76,15 @@
                 type='radio'
                 class='hidden'
                 :value='group'
-                v-model='routine.routineGroupByUser'
+                v-model='routine.group'
               />
               <label
                 :for='"group"+i'
                 class='p-2 border rounded-lg cursor-pointer'
                 :style='`style="background-color: ${colors[group?.color] ? colors[group?.color][500] : "unset" }`'
                 :class='{
-                  "bg-lime-500 text-white": routine.routineGroupByUser?.id === group?.id,
-                  "bg-gray-200 text-black": !routine.routineGroupByUser?.id === group?.id
+                  "bg-lime-500 text-white": routine.group?.id === group?.id,
+                  "bg-gray-200 text-black": !routine.group?.id === group?.id
                 }'
               >
                 {{ group?.name }}
@@ -128,6 +128,7 @@
       </div>
     </section>
     <section class='flex flex-col gap-2'>
+      <!--
       <div>
         추가설정
       </div>
@@ -144,22 +145,33 @@
           @input='(value) => { routine.isPublic = value }'
         />
       </div>
+      -->
+      <CucuryButton
+        label='저장'
+        @click='async() => {
+          await this.routineServer.post("/routine", this.routine)
+          this.$emit("updated:saved")
+        }'>
+        저장
+      </CucuryButton>
     </section>
   </main>
 </template>
 <script lang='ts'>
 import { defineComponent } from 'vue'
 import { Routine, RoutineGroup } from '@/models/Routine'
-import { getDayLabel } from '@/service'
+import { getDayLabel, routineServerInstance } from '@/service'
 import SimpleModal from '@/components/modal/SimpleModal.vue'
 import GroupColorRadio from '@/components/routine/edit/GroupColorRadio.vue'
 import colors from 'tailwindcss/colors'
 import CucuryToggle from '@/components/toggle/CucuryToggle.vue'
+import CucuryButton from '@/components/button/CucuryButton.vue'
 
 export default defineComponent({
   name: 'RoutineEdit',
-  components: { CucuryToggle, GroupColorRadio, SimpleModal },
+  components: { CucuryButton, CucuryToggle, GroupColorRadio, SimpleModal },
   setup() {
+    const routineServer = routineServerInstance()
     const defaultGroup = new RoutineGroup({
       id: -1, name: '그룹 없음', color: '#000'
     })
@@ -171,7 +183,8 @@ export default defineComponent({
       defaultGroup,
       SimpleModal,
       addGroupModalRef,
-      colors
+      colors,
+      routineServer
     }
   },
   props: {
@@ -185,8 +198,8 @@ export default defineComponent({
   data() {
     return {
       routine: new Routine({
-        dayForWeek: [],
-        routineGroupByUser: this.defaultGroup
+        dayOfWeek: [1,2,3,4,5],
+        group: this.defaultGroup
       }),
       groups: [
         this.defaultGroup
@@ -199,14 +212,37 @@ export default defineComponent({
       isGroupOpen: false,
     }
   },
+  mounted() {
+    this.init()
+  },
   computed: {
     selectedNewGroupColorCode() {
       return this.newGroup.color
+    },
+    dayOfWeek: {
+      get() {
+        return this.routine._dayOfWeek.split(",")
+      },
+      set(value) {
+        this.routine._dayOfWeek = value.join(",")
+      }
     }
   },
   methods: {
     getTempSaveGroup() {
       return this.groups.find((el) => el.id === null)
+    },
+    async init() {
+      // routine group
+      const res = await this.routineServer.get("/routine-group")
+      this.groups = res.data.map((el: any) => {
+        return new RoutineGroup({
+          id: el.id,
+          name: el.name,
+          color: el.color
+        })
+      })
+      this.groups = [this.defaultGroup, ...this.groups]
     },
     openNewGroup() {
       const tempSaveGroup = this.getTempSaveGroup()
@@ -223,15 +259,14 @@ export default defineComponent({
       }
       this.$refs.addGroupModalRef.isShow = true
     },
-    addGroup(newGroup: RoutineGroup) {
+    async addGroup(newGroup: RoutineGroup) {
       const tempSaveGroup = this.getTempSaveGroup()
       if (tempSaveGroup) {
         this.groups.pop()
       }
       this.groups.push(this.newGroup)
-      this.routine.routineGroupByUser = this.newGroup
+      this.routine.group = this.newGroup
       this.$refs.addGroupModalRef.isShow = false
-      console.log(this.groups)
     }
   }
 })

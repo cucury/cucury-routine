@@ -4,24 +4,30 @@ content-type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTY3MzQ0NzIsImV4cCI6MTcxNjczNTA3Mn0.alZsjZ7_fWr3n0OuMjryWDHQJeuBLG3_HlzCp_UuKMc
 
 {
-"id": null,
-"group": {
   "id": null,
-  "name": "기본",
-  "color": "indigo"
-},
-"title": "예-이! 첫 루틴",
-"dayOfWeek": "1,2,3,4,5",
-"startAt": "1714400800000",
-"endAt": "1714402800000",
-"alarmTime": "1714401800000",
-"loopAt": "1714401800000"
+  "group": {
+    "id": null,
+    "name": "기본",
+    "color": "indigo"
+  },
+  "title": "예-이! 첫 루틴",
+  "dayOfWeek": "1,2,3,4,5",
+  "startAt": "1714400800000",
+  "endAt": "1714402800000",
+  "alarmTime": "1714401800000",
+  "loopAt": "1714401800000",
+  "completedAt": null
 }
 
 ###
 GET http://localhost:9000/api/v1/routine HTTP/1.1
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTY3MzYyMDYsImV4cCI6MTcxNjczNjgwNn0.wkHbrbTtGMeGVYtLNs19Kk6nvVPxtmatFcMw7-xd3JI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTczMzAwNDYsImV4cCI6MTcxNzMzMDY0Nn0.ShLSl9oqV4bLT9uVS6ArmzOK4oeul6JNxRY3FPXUtiw
+
+###
+GET http://localhost:9000/api/v1/routine/completed-dt/2024-06-01 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTc4ODcwMjEsImV4cCI6MTcxNzg4NzYyMX0.2r_iaWiF9p_IyGocMzbzc61WUoBEUnMLn-gim8Kc2q4
 
 ###
 GET http://localhost:9000/api/v1/routine/1 HTTP/1.1
@@ -31,12 +37,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluM
 ###
 PUT http://localhost:9000/api/v1/routine HTTP/1.1
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTY3MzYyMDYsImV4cCI6MTcxNjczNjgwNn0.wkHbrbTtGMeGVYtLNs19Kk6nvVPxtmatFcMw7-xd3JI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTY4MjQzNTQsImV4cCI6MTcxNjgyNDk1NH0.DQ74VSY0QkiRIXVE6FzYXtThOX5SIU_hcXAhYvEpVqk
 
 {
-  "id": 19,
-  "mood": "행복111",
-  "content": "해피해피해--피",
-  "user_hash": "4c3d30db18c7e79e27be78c175b7c0a6",
-  "time": "1714705026677"
+  "id": 1,
+  "completedAt": "1714705026677"
 }

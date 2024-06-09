@@ -14,5 +14,4 @@ export class RoutineGroupResponse {
     this.name = name
     this.color = color
   }
-
 }
