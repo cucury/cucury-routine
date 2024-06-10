@@ -230,4 +230,22 @@ export class RoutineController {
     }
   }
 
+  public DeleteRoutine = async (req: Request, res: Response) => {
+    try {
+      const { id } = req.params
+      const routineByDb = await this.repository.findById(Number(id), getUserHash(req))
+      if (!routineByDb) {
+        return res.status(404).json({ error: "Routine not found" })
+      }
+      routineByDb.deleted_at = new Date().getTime().toString()
+      delete routineByDb.routine_group_by_user
+      delete routineByDb.routine_items_meta_data
+      const updatedRoutine = await this.repository.delete(routineByDb)
+      res.status(200).json(new RoutineResponse(updatedRoutine))
+    } catch (error) {
+      if (error instanceof Error) {
+        res.status(400).json({error: error.message})
+      }
+    }
+  }
 }

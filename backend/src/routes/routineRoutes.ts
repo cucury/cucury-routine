@@ -33,5 +33,6 @@ router.get(routinePath, authFilter, controller.GetRoutine)
 router.get(getV1Path('routine/completed-dt/:completedDt'), authFilter, controller.GetRoutineByCompletedDt)
 router.get(getV1Path('routine/:id'), authFilter, controller.GetRoutineById)
 router.put(routinePath, authFilter, controller.UpdateRoutine)
+router.delete(getV1Path('routine/:id'), authFilter, controller.DeleteRoutine)
 
 export default router

@@ -33,6 +33,7 @@ model routine_items_by_user {
   alarm_time               String?
   loop_at                  String?
   user_hash                String
+  deleted_at               String?
   routine_group_by_user    routine_group_by_user?    @relation(fields: [routine_group_by_user_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "routine_items_by_user_routine_group_by_user_id_fk")
   routine_items_meta_data  routine_items_meta_data[]
 }

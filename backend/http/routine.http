@@ -32,7 +32,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluM
 ###
 GET http://localhost:9000/api/v1/routine/1 HTTP/1.1
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJpYXQiOjE3MTY3MzYyMDYsImV4cCI6MTcxNjczNjgwNn0.wkHbrbTtGMeGVYtLNs19Kk6nvVPxtmatFcMw7-xd3JI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFAYi5jIiwiaWF0IjoxNzE3OTc3MzQzLCJleHAiOjE3MTc5Nzc5NDN9.lZQIJN6ClSmqEFMXfv1rEUm_uAF5WNpRaEPUpXMqUU4
 
 ###
 PUT http://localhost:9000/api/v1/routine HTTP/1.1
@@ -43,3 +43,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluM
   "id": 1,
   "completedAt": "1714705026677"
 }
+
+###
+DELETE http://localhost:9000/api/v1/routine/20 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFAYi5jIiwiaWF0IjoxNzE3OTc4MTY2LCJleHAiOjE3MTc5Nzg3NjZ9.r6Rn-TL4zUQClCoBU2vGBMv1msUxr9QOiNBwlVhgQ7M

@@ -12,7 +12,7 @@ export class RoutineRepository implements IRoutineRepository {
   }
 
   async create(routine: Routine): Promise<Routine> {
-    return this.prisma.routine_items_by_user.create({ data: routine, include: { routine_group_by_user: true } })
+    return this.prisma.routine_items_by_user.create({ data: routine, include: { routine_group_by_user: true }})
   }
 
   async update(routine: Routine): Promise<Routine> {
@@ -20,10 +20,14 @@ export class RoutineRepository implements IRoutineRepository {
   }
 
   async find(userHash: string): Promise<Routine[]> {
-    return this.prisma.routine_items_by_user.findMany({ where: { user_hash: userHash }, include: { routine_group_by_user: true, routine_items_meta_data: true } })
+    return this.prisma.routine_items_by_user.findMany({ where: { user_hash: userHash, deleted_at: null }, include: { routine_group_by_user: true, routine_items_meta_data: true } })
   }
 
   async findById(id: number, userHash: string): Promise<Routine> {
-    return this.prisma.routine_items_by_user.findFirst({ where: { user_hash: userHash, id }, include: { routine_group_by_user: true, routine_items_meta_data: true } })
+    return this.prisma.routine_items_by_user.findFirst({ where: { user_hash: userHash, id, deleted_at: null }, include: { routine_group_by_user: true, routine_items_meta_data: true } })
+  }
+
+  async delete(routine: Routine): Promise<Routine> {
+    return this.prisma.routine_items_by_user.update({ where: { id: routine.id }, data: routine })
   }
 }
