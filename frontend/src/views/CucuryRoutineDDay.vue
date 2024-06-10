@@ -7,7 +7,11 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="h-screen bg-cyan-300">DDay</div>
+  <div class="h-screen bg-white">
+    <div class='w-full min-h-32 bg-indigo-200 p-2 text-[2rem] rounded-lg'>
+      ❤️100일
+    </div>
+  </div>
 </template>
 
 <style scoped>

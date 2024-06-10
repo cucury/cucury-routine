@@ -2,10 +2,11 @@
   <div class='flex flex-col items-center'>
     <button
       type='button'
-      class='flex items-center justify-center bg-lime-500 text-white p-2 w-8 h-8 rounded-full'
+      class='flex items-center justify-center text-white p-2 w-8 h-8 rounded-full'
       :class='{
-        "bg-lime-300 text-gray-600": isSelected,
-        "bg-gray-800 text-white": !isSelected && isToday
+        "bg-gray-800 text-white": isToday,
+        "bg-lime-800 text-gray-600": isSelected,
+        "bg-lime-500 text-gray-600": !isSelected && !isToday
       }'
       @click='() => {}'
     >
@@ -37,8 +38,8 @@ export default {
     }
   }, computed: {
     isToday() {
-      const current = new Date(this.time).setHours(0, 0, 0, 0)
-      const today = new Date().setHours(0, 0, 0, 0)
+      const current = new Date(this.time).toLocaleDateString("sv-SE")
+      const today = new Date().toLocaleDateString("sv-SE")
       return current === today
     }
   }

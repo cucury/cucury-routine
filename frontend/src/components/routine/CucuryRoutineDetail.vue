@@ -55,7 +55,7 @@
     </div>
     <div
       v-else
-      class='flex flex-col justify-center items-center gap-2'>
+      class='flex flex-col justify-center items-center gap-2l h-32 gap-2'>
       <div>
         새로운 루틴을 추가해보세요.
       </div>
@@ -130,6 +130,9 @@ export default {
       this.groupedRoutines = res.data
     },
     async removeRoutine(id) {
+      if (!confirm('루틴이 삭제 됩니다.\n삭제하시겠습니까?')) {
+        return
+      }
       try {
         await this.routineServer.delete(`/routine/${id}`)
         this.groupedRoutines = this.groupedRoutines.map(el => {
@@ -139,7 +142,6 @@ export default {
       } catch (e) {
         console.error(e)
       }
-
     },
     openNewRoutine() {
       this.detailModalRef.isShow = true
