@@ -1,3 +1,11 @@
+export type Dictionary<Key extends keyof any, Value> = {
+  [key in Key]: Value
+}
+
+export type DDayCategoryType = 'couple' | 'birthday_by_solar' | 'japanese_age' | 'birthday_by_lunar' | 'exam' | 'trip'
+
+export type DDayCategoryNameType = '커플' | '생일' | '만 나이' | '음력 생일' | '시험' | '여행'
+
 export enum DayType {
   '일',
   '월',
@@ -19,6 +27,15 @@ export const DiaryMood = {
   Sadness: '슬픔',
   Busyness: '바쁨',
   Pain: '아픔'
+}
+
+export const DDayCategoryNames: Dictionary<DDayCategoryType, DDayCategoryNameType> = {
+  'couple': '커플',
+  'birthday_by_solar': '생일',
+  'japanese_age': '만 나이',
+  'birthday_by_lunar': '음력 생일',
+  'exam': '시험',
+  'trip': '여행'
 }
 
 export const dummyWeeks = [

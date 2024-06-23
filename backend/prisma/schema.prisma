@@ -59,3 +59,11 @@ model routine_shared_items_mast {
   description String?
   public_at   DateTime? @db.Date
 }
+
+model d_day_by_user {
+  id                 Int     @id(map: "d_day_by_user_pk") @default(autoincrement())
+  type               String?
+  locale_date_string String?
+  user_hash          String?
+  name               String?
+}
