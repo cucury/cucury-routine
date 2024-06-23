@@ -4,7 +4,7 @@ import { DiaryRepository } from '../repositories/DiaryRepository'
 import { Container } from 'inversify'
 import { IDiaryRepository } from '../interfaces/IDiaryRepository'
 import { IDiaryInteractor } from '../interfaces/IDiaryInteractor'
-import { DiaryController } from '../controllers/diaryController'
+import { DiaryController } from '../controllers/DiaryController'
 import { DiaryInteractor } from '../interactors/diary/DiaryInteractor'
 import { INTERFACE_TYPES } from '../utils/beanFactory'
 

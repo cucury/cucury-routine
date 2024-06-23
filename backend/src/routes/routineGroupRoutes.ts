@@ -2,7 +2,7 @@ import express from 'express'
 import { INTERFACE_TYPES } from '../utils/beanFactory'
 import { authFilter, getV1Path } from './index'
 import { Container } from 'inversify'
-import { RoutineGroupController } from '../controllers/routineGroupController'
+import { RoutineGroupController } from '../controllers/RoutineGroupController'
 import { IRoutineGroupRepository } from '../interfaces/IRoutineGroupRepository'
 import { RoutineGroupRepository } from '../repositories/RoutineGroupRepository'
 

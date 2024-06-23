@@ -4,7 +4,7 @@ import { authFilter, getV1Path } from './index'
 import { Container } from 'inversify'
 import { RoutineMetaDataRepository } from '../repositories/RoutineMetaDataRepository'
 import { IRoutineMetaDataRepository } from '../interfaces/IRoutineMetaDataRepository'
-import { RoutineMetaDataController } from '../controllers/routineMetaDataController'
+import { RoutineMetaDataController } from '../controllers/RoutineMetaDataController'
 
 const container = new Container()
 

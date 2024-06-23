@@ -11,4 +11,7 @@ export const INTERFACE_TYPES = {
   RoutineMetaDataController: Symbol.for('RoutineMetaDataController'),
   RoutineMetaDataInteractor: Symbol.for('RoutineMetaDataInteractor'),
   RoutineMetaDataRepository: Symbol.for('RoutineMetaDataRepository'),
+  DDayController: Symbol.for('DDayController'),
+  DDayInteractor: Symbol.for('DDayInteractor'),
+  DDayRepository: Symbol.for('DDayRepository'),
 }

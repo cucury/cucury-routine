@@ -1,5 +1,6 @@
 import 'reflect-metadata'
 import express from 'express'
+import dDayRoutes from './routes/dDayRoutes'
 import diaryRouter from './routes/diaryRoutes'
 import routineRouter from './routes/routineRoutes'
 import routineGroupRouter from './routes/routineGroupRoutes'
@@ -14,6 +15,7 @@ app.use(cors())
 
 app.use(express.json())
 
+app.use(dDayRoutes)
 app.use(diaryRouter)
 app.use(routineRouter)
 app.use(routineGroupRouter)

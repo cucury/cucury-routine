@@ -30,7 +30,8 @@ export default defineComponent({
         type="button"
         @click="
           () => {
-            isShow = false
+            this.isShow = false
+            this.$emit('updated:closed-modal')
           }
         "
         class="w-2/12 flex justify-center"

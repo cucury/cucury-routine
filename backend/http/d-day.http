@@ -1,0 +1,15 @@
+###
+GET http://localhost:9000/api/v1/d-day HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFAYi5jIiwiaWF0IjoxNzE5MTM0NDE3LCJleHAiOjE3MTkxMzUwMTd9.fxw-X6me9IPf1_aqsNp5jumiFrqXU52hP1CdWJykN6k
+
+###
+POST http://localhost:9000/api/v1/d-day HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFAYi5jIiwiaWF0IjoxNzE5MTM0NDE3LCJleHAiOjE3MTkxMzUwMTd9.fxw-X6me9IPf1_aqsNp5jumiFrqXU52hP1CdWJykN6k
+
+{
+    "name": "test",
+    "localeDateString": "2021-04-01",
+    "type": "couple"
+}

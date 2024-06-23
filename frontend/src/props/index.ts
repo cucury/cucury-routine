@@ -5,3 +5,7 @@ export interface DiaryProps {
   time: number
 }
 
+export interface LunarDateProps {
+  dateString: string,
+  isValidDate: boolean
+}
