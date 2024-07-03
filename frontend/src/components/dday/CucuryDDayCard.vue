@@ -3,12 +3,12 @@
     <div class="flex items-center justify-between">
       <div>
         <CalendarHeartIcon v-if="'couple' === dDay.type" class="text-pink-500" />
-        <CertificateIcon v-if="'exam' === dDay.type" class="text-blue-500" />
-        <AirplaneTakeoffIcon v-if="'trip' === dDay.type" class="text-lime-500"  />
-        <CakeIcon v-if="dDay.type.includes('birthday') || dDay.type.includes('age')" class="text-indigo-500" />
+        <CertificateIcon v-else-if="'exam' === dDay.type" class="text-blue-500" />
+        <AirplaneTakeoffIcon v-else-if="'trip' === dDay.type" class="text-lime-500"  />
+        <CakeIcon v-else class="text-indigo-500" />
       </div>
       <div class="w-full px-2">
-        <div>
+        <div class="line-clamp-1">
           {{ dDay.name }}
         </div>
         <div>
@@ -20,7 +20,11 @@
           {{ new Date(dDay.localeDateString).getTime() > new Date().getTime() ? 'D-' : 'D+' }}
           {{ Math.abs(Math.floor((new Date(dDay.localeDateString).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))) }}
         </div>
-        <div v-if="'birthday_by_solar' === dDay.type">
+        <div v-else-if="'birthday_by_solar' === dDay.type">
+          {{ new Date(dDay.localeDateString).getTime() > new Date().getTime() ? 'D-' : 'D+' }}
+          {{ Math.abs(Math.floor((new Date(dDay.localeDateString).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))) }}
+        </div>
+        <div v-else>
           {{ new Date(dDay.localeDateString).getTime() > new Date().getTime() ? 'D-' : 'D+' }}
           {{ Math.abs(Math.floor((new Date(dDay.localeDateString).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))) }}
         </div>

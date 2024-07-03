@@ -1,7 +1,7 @@
 <template >
   <div class='relative flex w-full'>
     <CucuryDDayCategoryEditHeader
-      :label='`${ isNaN(howManyDay) ? "올바르지 않은 날짜입니다." : howManyDay === 0 ? "D-DAY" : "D-" + howManyDay }`'
+      :label='getDDayTextBySolarBirthday({ howManyDay })'
       :dDay 
       @updated:closed-edit='() => {
         this.$emit("updated:closed-edit")
@@ -25,11 +25,16 @@
 
 <script>
 import CucuryDDayCategoryEditHeader from '@/components/dday/category/CucuryDDayCategoryEditHeader.vue'
-import { getDDay } from '@/service/dday'
+import { getDDay, getDDayTextBySolarBirthday } from '@/service/dday'
 import { DDay } from '@/models/DDay'
 export default {
   name: 'CucuryDDayBirthdayBySolar',
   components: { CucuryDDayCategoryEditHeader },
+  setup() {
+    return {
+      getDDayTextBySolarBirthday,
+    }
+  },
   props: {
     category: {
       type: String,

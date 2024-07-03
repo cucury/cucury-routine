@@ -1,9 +1,9 @@
 <template >
   <div class='relative flex w-full'>
     <CucuryDDayCategoryEditHeader
-      :label='`${ lunar.err ? "올바르지 않은 날짜입니다." : howManyDay === 0 ? "D-DAY" : "D-" + howManyDay }`'
+      :label='getDDayTextByLunarBirthday({ lunar, howManyDay })'
       :dDay @updated:closed-edit='() => {
-        this.$emit("updated:closed-edit")
+        $emit("updated:closed-edit")
       }' />
     <div class='absolute top-32 bg-white w-full rounded-tl-2xl rounded-tr-2xl p-6 h-[calc(100vh_-_18rem)] z-30' >
       <div class='flex flex-col h-full gap-4'>
@@ -42,10 +42,8 @@
 
 <script lang="ts">
 import CucuryDDayCategoryEditHeader from '@/components/dday/category/CucuryDDayCategoryEditHeader.vue'
-import { getDDay } from '@/service/dday'
-import solarlunar from 'solarlunar'
-import { isInvalidDate } from '@/service/dday'
-import { Err, Ok } from 'ts-results'
+import { getDDay, getDDayTextByLunarBirthday, getLunar } from '@/service/dday'
+import { Ok } from 'ts-results'
 import { DDay } from '@/models/DDay'
 
 export default {
@@ -53,7 +51,9 @@ export default {
   components: { CucuryDDayCategoryEditHeader },
   setup() {
     return {
-      prevLunar: Ok(new Date().toLocaleDateString("sv-SE"))
+      prevLunar: Ok(new Date().toLocaleDateString("sv-SE")),
+      getDDayTextByLunarBirthday,
+      getLunar,
     }
   },
   props: {
@@ -67,25 +67,7 @@ export default {
       return getDDay(new Date(this.anniversaryDate))
     },
     lunar() {
-      const selectedDate = new Date(this.anniversaryDate)
-      const lunar = solarlunar.lunar2solar(
-        selectedDate.getFullYear(),
-        selectedDate.getMonth() +1,
-        selectedDate.getDate())
-      if (isInvalidDate(this.anniversaryDate)) {
-        return Err(new Error("음력 날짜를 계산할 수 없습니다."))
-      } else if (!lunar.cYear
-      || !lunar.cMonth
-      || !lunar.cDay
-      || lunar === -1
-      ) {
-        return Err(new Error(`음력 ${this.anniversaryDate}은 존재하지 않는 날짜입니다.`))
-      } else {
-        const mm = lunar.cMonth.toString().padStart(2, "0")
-        const dd = lunar.cDay.toString().padStart(2, "0")
-        const dateString = `${lunar.cYear}-${mm}-${dd}`
-        return Ok(dateString)
-      }
+      return getLunar({ anniversaryDate: this.anniversaryDate })
     },
     dDay() {
       return new DDay({
@@ -100,7 +82,7 @@ export default {
       this.prevLunar = o
     }
   },
-  data() {
+  data(): { anniversaryDate: string, name: string } {
     return {
       anniversaryDate: new Date().toLocaleDateString("sv-SE"),
       name: ''
