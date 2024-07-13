@@ -5,6 +5,7 @@
         v-for='(dDay, index) in dDays'
         :key='index'
         :dDay='dDay'
+        :label='anniversaryDateNow( dDay )'
         />
     </div>
     <div
@@ -57,7 +58,12 @@ export default {
     }
   },
   methods: {
-    getAsyncDDays
+    getAsyncDDays,
+    anniversaryDateNow(dDay) {
+      const today = new Date().getTime()
+      const anniversaryTime = new Date(dDay.localeDateString).getTime()
+      return Math.ceil((today - anniversaryTime) / (1000 * 3600 * 24))
+    }
   },
   async mounted() {
     this.dDays = await this.getAsyncDDays()

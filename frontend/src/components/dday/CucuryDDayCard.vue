@@ -18,15 +18,15 @@
       <div>
         <div v-if="'couple' === dDay.type">
           {{ new Date(dDay.localeDateString).getTime() > new Date().getTime() ? 'D-' : 'D+' }}
-          {{ Math.abs(Math.floor((new Date(dDay.localeDateString).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))) }}
+          {{ label }}
         </div>
         <div v-else-if="'birthday_by_solar' === dDay.type">
           {{ new Date(dDay.localeDateString).getTime() > new Date().getTime() ? 'D-' : 'D+' }}
-          {{ Math.abs(Math.floor((new Date(dDay.localeDateString).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))) }}
+          {{ label }}
         </div>
         <div v-else>
           {{ new Date(dDay.localeDateString).getTime() > new Date().getTime() ? 'D-' : 'D+' }}
-          {{ Math.abs(Math.floor((new Date(dDay.localeDateString).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))) }}
+          {{ label }}
         </div>
       </div>
     </div>
@@ -46,6 +46,10 @@ export default {
     dDay: {
       type: Object,
       required: true
+    },
+    label: {
+      type: String,
+      default: () => ''
     }
   },
   setup() {
@@ -61,4 +65,4 @@ export default {
     }
   }
 }
-</script>
+</script> 
