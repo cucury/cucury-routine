@@ -11,6 +11,10 @@
   - 처음에는 아--주 단순한 기능만 만들어 본다(복잡한 기능 만들지 말기!)
   - 기여도 0.00001%만 이상이라면 문제 없음
 
+## Layout
+
+![](./docs/layout.drawio.svg)
+
 ## Use Case
 
 ![](./docs/cucury-routine.usecase.drawio.svg)
