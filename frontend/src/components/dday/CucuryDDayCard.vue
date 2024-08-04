@@ -16,11 +16,23 @@
         </div>
       </div>
       <div>
-        <div v-if="'couple' === dDay.type">
+        <div v-if="'birthday_by_lunar' === dDay.type">
           {{ new Date(dDay.localeDateString).getTime() > new Date().getTime() ? 'D-' : 'D+' }}
           {{ label }}
         </div>
         <div v-else-if="'birthday_by_solar' === dDay.type">
+          {{ new Date(dDay.localeDateString).getTime() > new Date().getTime() ? 'D-' : 'D+' }}
+          {{ label }}
+        </div>
+        <div v-else-if="'couple' === dDay.type">
+          {{ new Date(dDay.localeDateString).getTime() > new Date().getTime() ? 'D-' : 'D+' }}
+          {{ label }}
+        </div>
+        <div v-else-if="'exam' === dDay.type">
+          {{ new Date(dDay.localeDateString).getTime() > new Date().getTime() ? 'D-' : 'D+' }}
+          {{ label }}
+        </div>
+        <div v-else-if="'japanese_age' === dDay.type">
           {{ new Date(dDay.localeDateString).getTime() > new Date().getTime() ? 'D-' : 'D+' }}
           {{ label }}
         </div>
